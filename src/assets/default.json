@@ -1,0 +1,14 @@
+{
+    "hp": 100,
+    "damege": 40,
+    "reloadSpeed": 3,
+    "bulletSpeed": 100,
+    "bulletAmount": 3,
+    "bulletBounds": 0,
+    "bulletAmountPerShot": 1,
+    "shieldCoolTime": 3,
+    "fireRate": 100,
+    "movingSpeed": 100,
+    "jumpHeight": 100,
+    "numberOfJump": 1
+}

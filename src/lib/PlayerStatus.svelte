@@ -1,0 +1,161 @@
+<script lang="ts">
+  import { parameterStore } from './stores/parameterStore';
+
+  // デフォルトのパラメータをインポート
+  import defaultJson from '../assets/default.json';
+</script>
+
+<div class="status-panel">
+  <div class="header">
+    <h2>プレイヤーステータス</h2>
+    <button class="reset-button" on:click={() => parameterStore.reset()}>
+      リセット
+    </button>
+  </div>
+  <table class="stats">
+    <tbody>
+      <tr>
+        <td>HP:</td>
+        <td class:buff={$parameterStore.hp > defaultJson.hp} class:debuff={$parameterStore.hp < defaultJson.hp}>
+          {Math.floor($parameterStore.hp)}
+        </td>
+      </tr>
+      <tr>
+        <td>ダメージ:</td>
+        <td class:buff={$parameterStore.damege > defaultJson.damege} class:debuff={$parameterStore.damege < defaultJson.damege}>
+          {Math.floor($parameterStore.damege)}
+        </td>
+      </tr>
+      <tr>
+        <td>弾速:</td>
+        <td class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed} class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}>
+          {Math.floor($parameterStore.bulletSpeed)}%
+        </td>
+      </tr>
+      <tr>
+        <td>弾数:</td>
+        <td class:buff={$parameterStore.bulletAmount > defaultJson.bulletAmount} class:debuff={$parameterStore.bulletAmount < defaultJson.bulletAmount}>
+          {Math.floor($parameterStore.bulletAmount)}
+        </td>
+      </tr>
+      <tr>
+        <td>同時発射数:</td>
+        <td class:buff={$parameterStore.bulletAmountPerShot > defaultJson.bulletAmountPerShot} class:debuff={$parameterStore.bulletAmountPerShot < defaultJson.bulletAmountPerShot}>
+          {Math.floor($parameterStore.bulletAmountPerShot)}
+        </td>
+      </tr>
+      <tr>
+        <td>跳弾回数:</td>
+        <td class:buff={$parameterStore.bulletBounds > defaultJson.bulletBounds} class:debuff={$parameterStore.bulletBounds < defaultJson.bulletBounds}>
+          {Math.floor($parameterStore.bulletBounds)}
+        </td>
+      </tr>
+      <tr>
+        <td>リロード速度:</td>
+        <td class:buff={$parameterStore.reloadSpeed < defaultJson.reloadSpeed} class:debuff={$parameterStore.reloadSpeed > defaultJson.reloadSpeed}>
+          {Math.floor($parameterStore.reloadSpeed*100)/100}秒
+        </td>
+      </tr>
+      <tr>
+        <td>シールドCD:</td>
+        <td class:buff={$parameterStore.shieldCoolTime < defaultJson.shieldCoolTime} class:debuff={$parameterStore.shieldCoolTime > defaultJson.shieldCoolTime}>
+          {Math.floor($parameterStore.shieldCoolTime*100)/100}秒
+        </td>
+      </tr>
+      <tr>
+        <td>連射速度:</td>
+        <td class:buff={$parameterStore.fireRate > defaultJson.fireRate} class:debuff={$parameterStore.fireRate < defaultJson.fireRate}>
+          {Math.floor($parameterStore.fireRate)}%
+        </td>
+      </tr>
+      <tr>
+        <td>移動速度:</td>
+        <td class:buff={$parameterStore.movingSpeed > defaultJson.movingSpeed} class:debuff={$parameterStore.movingSpeed < defaultJson.movingSpeed}>
+          {Math.floor($parameterStore.movingSpeed)}%
+        </td>
+      </tr>
+      <tr>
+        <td>ジャンプ力:</td>
+        <td class:buff={$parameterStore.jumpHeight > defaultJson.jumpHeight} class:debuff={$parameterStore.jumpHeight < defaultJson.jumpHeight}>
+          {Math.floor($parameterStore.jumpHeight)}%
+        </td>
+      </tr>
+      <tr>
+        <td>ジャンプ回数:</td>
+        <td class:buff={$parameterStore.numberOfJump > defaultJson.numberOfJump} class:debuff={$parameterStore.numberOfJump < defaultJson.numberOfJump}>
+          {Math.floor($parameterStore.numberOfJump)}回
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .status-panel {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    color: black;
+    position: sticky;
+    top: 7rem;  /* ヘッダーの高さ + 余白 */
+    max-height: calc(100vh - 8rem);  /* ビューポートの高さから余白を引く */
+    overflow-y: auto;
+    align-self: flex-start;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    color: #333;
+  }
+
+  .reset-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+
+  .reset-button:hover {
+    background-color: #ff5252;
+  }
+
+  .stats {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .stats td {
+    padding: 0.3rem 0;
+    text-align: left;
+  }
+
+  .stats td:first-child {
+    font-weight: bold;
+    padding-right: 1rem;
+  }
+
+  .stats td:last-child {
+    text-align: right;
+  }
+
+  .buff {
+    color: blue;
+  }
+
+  .debuff {
+    color: red;
+  }
+</style>

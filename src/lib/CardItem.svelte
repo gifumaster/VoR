@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { parameterStore } from './stores/parameterStore';
+  
   export let name = '';
   export let addHpRate: number | undefined = undefined;
   export let addHpDraimRate: number | undefined = undefined;
@@ -21,9 +23,31 @@
                    rarity === 2 ? '#87CEEB' :  // 水色
                    rarity === 3 ? '#500050' :  // 紫色
                    '#ddd';  // デフォルトの色
+
+  function handleCardSelect() {
+    parameterStore.applyCard({
+      addHpRate,
+      addHpDraimRate,
+      addDamageRate,
+      addBulletAmount,
+      addBulletSpeedRate,
+      addBulletBounds,
+      addBulletAmountPerShot,
+      addReloadSpeedRate,
+      addReloadSpeedSeconds,
+      addFireRate,
+      addShieldCoolTimeRate,
+      addMovingSpeedRate,
+      addJumpHeightRate,
+      addNumberOfJump,
+      addAbillity
+    });
+  }
 </script>
 
-<div class="card" style:border-color={borderColor}>
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<div class="card" style:border-color={borderColor} on:click={handleCardSelect}>
   <h3 style="color: {borderColor}">{name}</h3>
   <table class="stats">
     <tbody>
@@ -80,12 +104,23 @@
 
 <style>
   .card {
-    border: 5px solid;  /* 枠線を太くして目立たせる */
+    border: 5px solid;
     border-radius: 8px;
     padding: 1rem;
     background-color: #fff;
     color: black;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    min-height:200px;
+    max-height: 400px;  /* 最大高さを設定 */
+    overflow-y: auto;   /* 内容が多い場合はスクロール可能に */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
   }
 
   h3 {
