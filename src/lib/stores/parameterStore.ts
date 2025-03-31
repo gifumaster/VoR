@@ -56,6 +56,9 @@ function createParameterStore() {
         if (card.addShieldCoolTimeRate !== undefined) {
           newParams.shieldCoolTime = calculateNewParameterValue(params.shieldCoolTime, card.addShieldCoolTimeRate, 'shieldCoolTime', true);
         }
+        if (card.addShieldCoolTimeSeconds !== undefined) {
+          newParams.shieldCoolTime = calculateNewParameterValue(params.shieldCoolTime, card.addShieldCoolTimeSeconds, 'shieldCoolTime', false);
+        }        
         if (card.addFireRate !== undefined) {
           newParams.fireRate = calculateNewParameterValue(params.fireRate, card.addFireRate, 'fireRate', true);
         }

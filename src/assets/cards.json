@@ -43,7 +43,7 @@
       "addHpRate": 75,
       "addFireRate": -50,
       "addReloadSpeedSeconds": 0.25,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
@@ -112,14 +112,14 @@
       "name": "フロストウェーブ",
       "addAbillity": "シールド時に敵に凍結を付与する波を放つ",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
       "name": "ヒーリングスポット",
       "addAbillity": "シールド時に回復エリアをフィールドに作成する",
       "addHpRate": 20,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
@@ -133,7 +133,7 @@
       "name": "シールドブースト",
       "addAbillity": "シールド時に向いている方向に衝撃波を放つ",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
@@ -192,27 +192,27 @@
       "name": "エクスプロード",
       "addAbillity": "着弾時に爆発効果を付与",
       "addFireRate": -35,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2
     },
     {
       "name": "ディレイ",
       "addAbillity": "シールド時に時間差で再度シールドをする",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "rarity": 2
     },
     {
       "name": "プッシュエフェクト",
       "addAbillity": "シールド時に敵を弾き飛ばす衝撃波を発生",
       "addHpRate": 25,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2
     },
     {
       "name": "アトラクト",
       "addHpRate": 20,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時に敵を吸い寄せる衝撃波を発生させる",
       "rarity": 2
     },
@@ -255,7 +255,7 @@
     {
       "name": "マッスルカウンター",
       "addHpRate": 20,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時に最大HPの12%のダメージを与える",
       "rarity": 2
     },
@@ -281,7 +281,7 @@
     {
       "name": "ロケットジャンプ",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時に爆発を起こしながら上に飛びあがる",
       "rarity": 2
     },
@@ -355,7 +355,7 @@
     {
       "name": "リロードシールド",
       "addReloadSpeedSeconds": 0.5,
-      "addShieldCoolTimeRate": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "弾丸を打ち切った際にシールドを発動する",
       "rarity": 3
     },
@@ -378,26 +378,26 @@
     {
       "name": "スーパーノヴァ",
       "addHpRate": 20,
-      "addShieldCoolTimeRate": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "シールド時に時間差で大爆発を起こす",
       "rarity": 3
     },
     {
       "name": "スラッシュ",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時に持続的にダメージを与える衝撃波を出す",
       "rarity": 3
     },
     {
       "name": "タクティカルリロード",
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時に装弾数を回復する",
       "rarity": 3
     },
     {
       "name": "パルスソナー",
-      "addShieldCoolTimeRate": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "シールドCD完了時に3秒間マークと破壊を与える",
       "rarity": 3
     },
@@ -478,7 +478,7 @@
       "name": "サンバースト",
       "addAbillity": "シールド時にダメージと炎上を与える炎を発生させる",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2
     },
     {
@@ -499,7 +499,7 @@
       "name": "シャインリング",
       "addAbillity": "シールド時に1秒後に付近にダメージを与えるリングを生成",
       "addHpRate": 20,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2
     },
     {
@@ -513,7 +513,7 @@
       "name": "ランスチャージ",
       "addAbillity": "シールド時に時間差で前方に突進する",
       "addHpRate": 10,
-      "addShieldCoolTimeRate": 0.25,
+      "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
@@ -539,7 +539,7 @@
     {
       "name": "ぬいぐるみ",
       "addAbillity": "他プレイヤーにプレゼントを渡す",
-      "addShieldCoolTimeRate": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "rarity": 3
     }
   ]

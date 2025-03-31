@@ -13,6 +13,7 @@
   export let addReloadSpeedSeconds: number | undefined = undefined;
   export let addFireRate: number | undefined = undefined;
   export let addShieldCoolTimeRate: number | undefined = undefined;
+  export let addShieldCoolTimeSeconds: number | undefined = undefined;
   export let addNumberOfJump: number | undefined = undefined;
   export let addMovingSpeedRate: number | undefined = undefined;
   export let addJumpHeightRate: number | undefined = undefined;
@@ -37,6 +38,7 @@
       addReloadSpeedSeconds,
       addFireRate,
       addShieldCoolTimeRate,
+      addShieldCoolTimeSeconds,
       addMovingSpeedRate,
       addJumpHeightRate,
       addNumberOfJump,
@@ -90,6 +92,9 @@
       {/if}
       {#if addShieldCoolTimeRate !== undefined}
         <tr><td>シールドCD:</td><td class:negative={addShieldCoolTimeRate > 0}>{addShieldCoolTimeRate > 0 ? '+' : ''}{addShieldCoolTimeRate}%</td></tr>
+      {/if}
+      {#if addShieldCoolTimeSeconds !== undefined}
+        <tr><td>シールドCD:</td><td class:negative={addShieldCoolTimeSeconds > 0}>{addShieldCoolTimeSeconds > 0 ? '+' : ''}{addShieldCoolTimeSeconds} sec</td></tr>
       {/if}
       {#if addMovingSpeedRate !== undefined}
         <tr><td>移動速度:</td><td class:negative={addMovingSpeedRate < 0}>{addMovingSpeedRate > 0 ? '+' : ''}{addMovingSpeedRate}%</td></tr>
