@@ -30,13 +30,30 @@
     const { query, statFilter, rarityFilter } = event.detail;
     const searchText = query.toLowerCase();
 
-    filteredCards = cardJson.cards.filter((card: Card) => {
+    let filtered = cardJson.cards.filter((card: Card) => {
       const nameMatch = card.name.toLowerCase().includes(searchText);
       const statMatch = !statFilter || card[statFilter as keyof Card] !== undefined;
       const rarityMatch = !rarityFilter || (card.rarity === Number(rarityFilter));
       
       return nameMatch && statMatch && rarityMatch;
     });
+
+    // フィルターが設定されている場合、その値でソート
+    if (statFilter) {
+      filtered.sort((a: Card, b: Card) => {
+        const aValue = a[statFilter as keyof Card];
+        const bValue = b[statFilter as keyof Card];
+        
+        // undefinedの値は後ろに
+        if (aValue === undefined) return 1;
+        if (bValue === undefined) return -1;
+        
+        // 数値として降順にソート
+        return Number(bValue) - Number(aValue);
+      });
+    }
+
+    filteredCards = filtered;
   }
 </script>
 

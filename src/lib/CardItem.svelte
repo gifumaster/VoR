@@ -57,62 +57,110 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div class="card" style:border-color={borderColor} on:click={handleCardSelect}>
-  <h3 style="color: {borderColor}">{name}</h3>
-  <table class="stats">
-    <tbody>
-      {#if addHpRate !== undefined}
-        <tr><td>HP:</td><td class:negative={addHpRate < 0}>{addHpRate > 0 ? '+' : ''}{addHpRate}%</td></tr>
-      {/if}
-      {#if addHpDrainRate !== undefined}
-        <tr><td>HP吸収:</td><td class:negative={addHpDrainRate < 0}>{addHpDrainRate > 0 ? '+' : ''}{addHpDrainRate}%</td></tr>
-      {/if}
-      {#if addDamageRate !== undefined}
-        <tr><td>ダメージ:</td><td class:negative={addDamageRate < 0}>{addDamageRate > 0 ? '+' : ''}{addDamageRate}%</td></tr>
-      {/if}
-      {#if addBulletAmount !== undefined}
-        <tr><td>弾数:</td><td class:negative={addBulletAmount < 0}>{addBulletAmount > 0 ? '+' : ''}{addBulletAmount}</td></tr>
-      {/if}
-      {#if addBulletSpeedRate !== undefined}
-        <tr><td>弾速:</td><td class:negative={addBulletSpeedRate < 0}>{addBulletSpeedRate > 0 ? '+' : ''}{addBulletSpeedRate}%</td></tr>
-      {/if}
-      {#if addBulletBounds !== undefined}
-        <tr><td>跳弾回数:</td><td class:negative={addBulletBounds < 0}>{addBulletBounds > 0 ? '+' : ''}{addBulletBounds}</td></tr>
-      {/if}
-      {#if addBulletAmountPerShot !== undefined}
-        <tr><td>同時発射数:</td><td class:negative={addBulletAmountPerShot < 0}>{addBulletAmountPerShot > 0 ? '+' : ''}{addBulletAmountPerShot}</td></tr>
-      {/if}
-      {#if addReloadSpeedRate !== undefined}
-        <tr><td>リロード速度:</td><td class:negative={addReloadSpeedRate > 0}>{addReloadSpeedRate > 0 ? '+' : ''}{addReloadSpeedRate}%</td></tr>
-      {/if}
-      {#if addReloadSpeedSeconds !== undefined}
-        <tr><td>リロード速度:</td><td class:negative={addReloadSpeedSeconds > 0}>{addReloadSpeedSeconds > 0 ? '+' : ''}{addReloadSpeedSeconds} sec</td></tr>
-      {/if}
-      {#if addFireRate !== undefined}
-        <tr><td>連射速度:</td><td class:negative={addFireRate < 0}>{addFireRate > 0 ? '+' : ''}{addFireRate}%</td></tr>
-      {/if}
-      {#if addShieldCoolTimeRate !== undefined}
-        <tr><td>シールドCD:</td><td class:negative={addShieldCoolTimeRate > 0}>{addShieldCoolTimeRate > 0 ? '+' : ''}{addShieldCoolTimeRate}%</td></tr>
-      {/if}
-      {#if addShieldCoolTimeSeconds !== undefined}
-        <tr><td>シールドCD:</td><td class:negative={addShieldCoolTimeSeconds > 0}>{addShieldCoolTimeSeconds > 0 ? '+' : ''}{addShieldCoolTimeSeconds} sec</td></tr>
-      {/if}
-      {#if addMovingSpeedRate !== undefined}
-        <tr><td>移動速度:</td><td class:negative={addMovingSpeedRate < 0}>{addMovingSpeedRate > 0 ? '+' : ''}{addMovingSpeedRate}%</td></tr>
-      {/if}
-      {#if addJumpHeightRate !== undefined}
-        <tr><td>ジャンプ力:</td><td class:negative={addJumpHeightRate < 0}>{addJumpHeightRate > 0 ? '+' : ''}{addJumpHeightRate}%</td></tr>
-      {/if}
-      {#if addNumberOfJump !== undefined}
-        <tr><td>ジャンプ回数:</td><td class:negative={addNumberOfJump < 0}>{addNumberOfJump > 0 ? '+' : ''}{addNumberOfJump}</td></tr>
-      {/if}
-    </tbody>
-  </table>
-  {#if addAbillity}
-  <p class="ability">
-    {addAbillity}
-  </p>
-{/if}
-</div>
+    <h3 style="color: {borderColor}">{name}</h3>
+    <table class="stats">
+      <tbody>
+        <!-- プラスの効果を先に表示 -->
+        {#if addHpRate !== undefined && addHpRate > 0}
+          <tr><td>HP:</td><td>+{addHpRate}%</td></tr>
+        {/if}
+        {#if addHpDrainRate !== undefined && addHpDrainRate > 0}
+          <tr><td>HP吸収:</td><td>+{addHpDrainRate}%</td></tr>
+        {/if}
+        {#if addDamageRate !== undefined && addDamageRate > 0}
+          <tr><td>ダメージ:</td><td>+{addDamageRate}%</td></tr>
+        {/if}
+        {#if addBulletAmount !== undefined && addBulletAmount > 0}
+          <tr><td>弾数:</td><td>+{addBulletAmount}</td></tr>
+        {/if}
+        {#if addBulletSpeedRate !== undefined && addBulletSpeedRate > 0}
+          <tr><td>弾速:</td><td>+{addBulletSpeedRate}%</td></tr>
+        {/if}
+        {#if addBulletBounds !== undefined && addBulletBounds > 0}
+          <tr><td>跳弾回数:</td><td>+{addBulletBounds}</td></tr>
+        {/if}
+        {#if addBulletAmountPerShot !== undefined && addBulletAmountPerShot > 0}
+          <tr><td>同時発射数:</td><td>+{addBulletAmountPerShot}</td></tr>
+        {/if}
+        {#if addFireRate !== undefined && addFireRate > 0}
+          <tr><td>連射速度:</td><td>+{addFireRate}%</td></tr>
+        {/if}
+        {#if addMovingSpeedRate !== undefined && addMovingSpeedRate > 0}
+          <tr><td>移動速度:</td><td>+{addMovingSpeedRate}%</td></tr>
+        {/if}
+        {#if addJumpHeightRate !== undefined && addJumpHeightRate > 0}
+          <tr><td>ジャンプ力:</td><td>+{addJumpHeightRate}%</td></tr>
+        {/if}
+        {#if addNumberOfJump !== undefined && addNumberOfJump > 0}
+          <tr><td>ジャンプ回数:</td><td>+{addNumberOfJump}</td></tr>
+        {/if}
+        {#if addReloadSpeedRate !== undefined && addReloadSpeedRate < 0}
+          <tr><td>リロード速度:</td><td>+{addReloadSpeedRate}%</td></tr>
+        {/if}
+        {#if addReloadSpeedSeconds !== undefined && addReloadSpeedSeconds < 0}
+          <tr><td>リロード速度:</td><td>+{addReloadSpeedSeconds} sec</td></tr>
+        {/if}
+        {#if addShieldCoolTimeRate !== undefined && addShieldCoolTimeRate < 0}
+          <tr><td>シールドCD:</td><td>+{addShieldCoolTimeRate}%</td></tr>
+        {/if}
+        {#if addShieldCoolTimeSeconds !== undefined && addShieldCoolTimeSeconds < 0}
+          <tr><td>シールドCD:</td><td>+{addShieldCoolTimeSeconds} sec</td></tr>
+        {/if}
+
+        <!-- マイナスの効果を後に表示 -->
+        {#if addHpRate !== undefined && addHpRate < 0}
+          <tr><td>HP:</td><td class="negative">{addHpRate}%</td></tr>
+        {/if}
+        {#if addHpDrainRate !== undefined && addHpDrainRate < 0}
+          <tr><td>HP吸収:</td><td class="negative">{addHpDrainRate}%</td></tr>
+        {/if}
+        {#if addDamageRate !== undefined && addDamageRate < 0}
+          <tr><td>ダメージ:</td><td class="negative">{addDamageRate}%</td></tr>
+        {/if}
+        {#if addBulletAmount !== undefined && addBulletAmount < 0}
+          <tr><td>弾数:</td><td class="negative">{addBulletAmount}</td></tr>
+        {/if}
+        {#if addBulletSpeedRate !== undefined && addBulletSpeedRate < 0}
+          <tr><td>弾速:</td><td class="negative">{addBulletSpeedRate}%</td></tr>
+        {/if}
+        {#if addBulletBounds !== undefined && addBulletBounds < 0}
+          <tr><td>跳弾回数:</td><td class="negative">{addBulletBounds}</td></tr>
+        {/if}
+        {#if addBulletAmountPerShot !== undefined && addBulletAmountPerShot < 0}
+          <tr><td>同時発射数:</td><td class="negative">{addBulletAmountPerShot}</td></tr>
+        {/if}
+        {#if addFireRate !== undefined && addFireRate < 0}
+          <tr><td>連射速度:</td><td class="negative">{addFireRate}%</td></tr>
+        {/if}
+        {#if addMovingSpeedRate !== undefined && addMovingSpeedRate < 0}
+          <tr><td>移動速度:</td><td class="negative">{addMovingSpeedRate}%</td></tr>
+        {/if}
+        {#if addJumpHeightRate !== undefined && addJumpHeightRate < 0}
+          <tr><td>ジャンプ力:</td><td class="negative">{addJumpHeightRate}%</td></tr>
+        {/if}
+        {#if addNumberOfJump !== undefined && addNumberOfJump < 0}
+          <tr><td>ジャンプ回数:</td><td class="negative">{addNumberOfJump}</td></tr>
+        {/if}
+        {#if addReloadSpeedRate !== undefined && addReloadSpeedRate > 0}
+          <tr><td>リロード速度:</td><td class="negative">{addReloadSpeedRate}%</td></tr>
+        {/if}
+        {#if addReloadSpeedSeconds !== undefined && addReloadSpeedSeconds > 0}
+          <tr><td>リロード速度:</td><td class="negative">{addReloadSpeedSeconds} sec</td></tr>
+        {/if}
+        {#if addShieldCoolTimeRate !== undefined && addShieldCoolTimeRate > 0}
+          <tr><td>シールドCD:</td><td class="negative">{addShieldCoolTimeRate}%</td></tr>
+        {/if}
+        {#if addShieldCoolTimeSeconds !== undefined && addShieldCoolTimeSeconds > 0}
+          <tr><td>シールドCD:</td><td class="negative">{addShieldCoolTimeSeconds} sec</td></tr>
+        {/if}
+      </tbody>
+    </table>
+    {#if addAbillity}
+      <p class="ability">
+        {addAbillity}
+      </p>
+    {/if}
+  </div>
 
 <style>
   .card {
