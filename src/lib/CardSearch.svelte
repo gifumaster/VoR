@@ -64,6 +64,8 @@
       <option value={option.value}>{option.label}</option>
     {/each}
   </select>
+
+  <a href="https://vrchat.com/home/world/wrld_09e6752e-f412-4794-8c07-92d65af0f759/info" target="_blank">VoR</a>
 </div>
 
 <style>
