@@ -50,12 +50,6 @@
         </td>
       </tr>
       <tr>
-        <td>弾速:</td>
-        <td class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed} class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}>
-          {Math.floor($parameterStore.bulletSpeed)}%
-        </td>
-      </tr>
-      <tr>
         <td>装弾数:</td>
         <td class:buff={$parameterStore.bulletAmount > defaultJson.bulletAmount} class:debuff={$parameterStore.bulletAmount < defaultJson.bulletAmount}>
           {Math.floor($parameterStore.bulletAmount)}
@@ -86,21 +80,27 @@
         </td>
       </tr>
       <tr>
+        <td>弾速:</td>
+        <td class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed} class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}>
+          {18 * Math.floor($parameterStore.bulletSpeed)/100} ({Math.floor($parameterStore.bulletSpeed)}%)
+        </td>
+      </tr>
+      <tr>
         <td>連射速度:</td>
         <td class:buff={$parameterStore.fireRate > defaultJson.fireRate} class:debuff={$parameterStore.fireRate < defaultJson.fireRate}>
-          {Math.floor($parameterStore.fireRate)}%
+          {Math.floor(0.35 / (Math.floor($parameterStore.fireRate)/100) * 100) / 100 } ({Math.floor($parameterStore.fireRate)}%)
         </td>
       </tr>
       <tr>
         <td>移動速度:</td>
         <td class:buff={$parameterStore.movingSpeed > defaultJson.movingSpeed} class:debuff={$parameterStore.movingSpeed < defaultJson.movingSpeed}>
-          {Math.floor($parameterStore.movingSpeed)}%
+          {5 * Math.floor($parameterStore.movingSpeed)/100 } ({Math.floor($parameterStore.movingSpeed)}%)
         </td>
       </tr>
       <tr>
         <td>ジャンプ力:</td>
         <td class:buff={$parameterStore.jumpHeight > defaultJson.jumpHeight} class:debuff={$parameterStore.jumpHeight < defaultJson.jumpHeight}>
-          {Math.floor($parameterStore.jumpHeight)}%
+          {8 * Math.floor($parameterStore.jumpHeight)/100} ({Math.floor($parameterStore.jumpHeight)}%)
         </td>
       </tr>
       <tr>
@@ -112,7 +112,8 @@
     </tbody>
   </table>
   <p class="notice">
-    パラメータの上限はあまり調べてないので上限突破しがちです。詳細が分かり次第更新。    
+    上限値を把握してないものもあります。<br />
+  　上限周りの処理は結構適当です。<br />
   </p>
 </div>
 

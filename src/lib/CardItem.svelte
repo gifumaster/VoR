@@ -95,16 +95,16 @@
           <tr><td>ジャンプ回数:</td><td>+{addNumberOfJump}</td></tr>
         {/if}
         {#if addReloadSpeedRate !== undefined && addReloadSpeedRate < 0}
-          <tr><td>リロード速度:</td><td>+{addReloadSpeedRate}%</td></tr>
+          <tr><td>リロード速度:</td><td>{addReloadSpeedRate}%</td></tr>
         {/if}
         {#if addReloadSpeedSeconds !== undefined && addReloadSpeedSeconds < 0}
-          <tr><td>リロード速度:</td><td>+{addReloadSpeedSeconds} sec</td></tr>
+          <tr><td>リロード速度:</td><td>{addReloadSpeedSeconds} sec</td></tr>
         {/if}
         {#if addShieldCoolTimeRate !== undefined && addShieldCoolTimeRate < 0}
-          <tr><td>シールドCD:</td><td>+{addShieldCoolTimeRate}%</td></tr>
+          <tr><td>シールドCD:</td><td>{addShieldCoolTimeRate}%</td></tr>
         {/if}
         {#if addShieldCoolTimeSeconds !== undefined && addShieldCoolTimeSeconds < 0}
-          <tr><td>シールドCD:</td><td>+{addShieldCoolTimeSeconds} sec</td></tr>
+          <tr><td>シールドCD:</td><td>{addShieldCoolTimeSeconds} sec</td></tr>
         {/if}
 
         <!-- マイナスの効果を後に表示 -->

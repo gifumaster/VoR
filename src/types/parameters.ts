@@ -4,7 +4,7 @@ export interface ParameterLimits {
 }
 
 export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
-  hp: { min: 10, max: null },
+  hp: { min: 10, max: 1000 },
   hpDrain: { min: 0, max: null },
   damege: { min: 10, max: null },
   reloadSpeed: { min: 0.01, max: null },

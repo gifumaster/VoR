@@ -2,7 +2,7 @@
     "hp": 100,
     "hpDrain":0,
     "damege": 40,
-    "reloadSpeed": 3,
+    "reloadSpeed": 2,
     "bulletSpeed": 100,
     "bulletAmount": 3,
     "bulletBounds": 0,
@@ -13,3 +13,4 @@
     "jumpHeight": 100,
     "numberOfJump": 1
 }
+
