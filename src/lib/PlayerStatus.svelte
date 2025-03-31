@@ -44,6 +44,12 @@
         </td>
       </tr>
       <tr>
+        <td>HP吸収:</td>
+        <td class:buff={$parameterStore.hpDrain > defaultJson.hpDrain} class:debuff={$parameterStore.hpDrain < defaultJson.hpDrain}>
+          {Math.floor($parameterStore.hpDrain)} %
+        </td>
+      </tr>
+      <tr>
         <td>弾速:</td>
         <td class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed} class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}>
           {Math.floor($parameterStore.bulletSpeed)}%

@@ -9,7 +9,7 @@
   const statOptions = [
     { value: '', label: 'フィルタ' },
     { value: 'addHpRate', label: 'HP' },
-    { value: 'addHpDraimRate', label: 'HP吸収' },
+    { value: 'addHpDrainRate', label: 'HP吸収' },
     { value: 'addDamageRate', label: 'ダメージ' },
     { value: 'addBulletAmount', label: '弾数' },
     { value: 'addBulletSpeedRate', label: '弾速' },

@@ -91,7 +91,7 @@
     {
       "name": "ドレイン",
       "addHpRate": 20,
-      "addHpDraimRate": 40,
+      "addHpDrainRate": 40,
       "rarity": 1
     },
     {
@@ -261,13 +261,13 @@
     },
     {
       "name": "スピードデーモン",
-      "addHpDraimRate": 30,
+      "addHpDrainRate": 30,
       "addAbillity": "弾丸がヒットすると4秒間移動速度+50%",
       "rarity": 2
     },
     {
       "name": "ヴァンパイア",
-      "addHpDraimRate": 20,
+      "addHpDrainRate": 20,
       "addFireRate": -20,
       "addAbillity": "弾丸がヒットすると弾丸の25%分のダメージを3秒間で与える",
       "rarity": 2

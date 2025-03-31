@@ -10,7 +10,7 @@
     name: string;
     rarity: number;
     addHpRate?: number;
-    addHpDraimRate?: number;
+    addHpDrainRate?: number;
     addDamageRate?: number;
     addBulletAmount?: number;
     addBulletSpeedRate?: number;

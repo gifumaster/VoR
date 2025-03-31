@@ -1,5 +1,6 @@
 {
     "hp": 100,
+    "hpDrain":0,
     "damege": 40,
     "reloadSpeed": 3,
     "bulletSpeed": 100,

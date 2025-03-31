@@ -3,7 +3,7 @@
   
   export let name = '';
   export let addHpRate: number | undefined = undefined;
-  export let addHpDraimRate: number | undefined = undefined;
+  export let addHpDrainRate: number | undefined = undefined;
   export let addDamageRate: number | undefined = undefined;
   export let addBulletAmount: number | undefined = undefined;
   export let addBulletSpeedRate: number | undefined = undefined;
@@ -28,7 +28,7 @@
   function handleCardSelect() {
     parameterStore.applyCard({
       addHpRate,
-      addHpDraimRate,
+      addHpDrainRate,
       addDamageRate,
       addBulletAmount,
       addBulletSpeedRate,
@@ -63,8 +63,8 @@
       {#if addHpRate !== undefined}
         <tr><td>HP:</td><td class:negative={addHpRate < 0}>{addHpRate > 0 ? '+' : ''}{addHpRate}%</td></tr>
       {/if}
-      {#if addHpDraimRate !== undefined}
-        <tr><td>HP吸収:</td><td class:negative={addHpDraimRate < 0}>{addHpDraimRate > 0 ? '+' : ''}{addHpDraimRate}%</td></tr>
+      {#if addHpDrainRate !== undefined}
+        <tr><td>HP吸収:</td><td class:negative={addHpDrainRate < 0}>{addHpDrainRate > 0 ? '+' : ''}{addHpDrainRate}%</td></tr>
       {/if}
       {#if addDamageRate !== undefined}
         <tr><td>ダメージ:</td><td class:negative={addDamageRate < 0}>{addDamageRate > 0 ? '+' : ''}{addDamageRate}%</td></tr>

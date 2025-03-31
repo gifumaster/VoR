@@ -5,6 +5,7 @@ export interface ParameterLimits {
 
 export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   hp: { min: 10, max: null },
+  hpDrain: { min: 0, max: null },
   damege: { min: 10, max: null },
   reloadSpeed: { min: 0.01, max: null },
   bulletSpeed: { min: 10, max: null },
@@ -20,6 +21,7 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
 
 export interface PlayerParameters {
   hp: number;
+  hpDrain: number;
   damege: number;
   reloadSpeed: number;
   bulletSpeed: number;
@@ -47,6 +49,7 @@ export function calculateNewParameterValue(
   isPercentage: boolean = false
 ): number {
   let newValue = currentValue;
+  
   if (isPercentage) {
     newValue = currentValue * (1 + modifier / 100);
   } else {

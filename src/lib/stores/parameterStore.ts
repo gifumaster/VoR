@@ -7,6 +7,7 @@ function createParameterStore() {
   // 初期値をdefault.jsonから設定
   const initialState: PlayerParameters = {
     hp: defaultJson.hp,
+    hpDrain: defaultJson.hpDrain,
     damege: defaultJson.damege,
     reloadSpeed: defaultJson.reloadSpeed,
     bulletSpeed: defaultJson.bulletSpeed,
@@ -31,6 +32,9 @@ function createParameterStore() {
         // カードの効果を適用
         if (card.addHpRate !== undefined) {
           newParams.hp = calculateNewParameterValue(params.hp, card.addHpRate, 'hp', true);
+        }
+        if (card.addHpDrainRate !== undefined) {
+          newParams.hpDrain = calculateNewParameterValue(params.hpDrain, card.addHpDrainRate, 'hpDrain', false);
         }
         if (card.addDamageRate !== undefined) {
           newParams.damege = calculateNewParameterValue(params.damege, card.addDamageRate, 'damege', true);
@@ -71,7 +75,6 @@ function createParameterStore() {
         if (card.addNumberOfJump !== undefined) {
           newParams.numberOfJump = calculateNewParameterValue(params.numberOfJump, card.addNumberOfJump, 'numberOfJump', false);
         }
-
         return newParams;
       });
     },
