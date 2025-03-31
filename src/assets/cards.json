@@ -17,7 +17,7 @@
     {
       "name": "ファストショット",
       "addDamageRate": 120,
-      "addReloadSpeedRate": -50,
+      "addFireRate": -50,
       "addReloadSpeedSeconds": -0.25,
       "rarity": 1
     },
@@ -62,7 +62,7 @@
     },
     {
       "name": "ラビット",
-      "addJumpRate": 30,
+      "addJumpHeightRate": 30,
       "addReloadSpeedRate": -20,
       "addHpRate": -15,
       "rarity": 1
@@ -174,7 +174,7 @@
     {
       "name": "バレッジ",
       "addBulletAmountPerShot": 4,
-      "addBulletAmount": 5,
+      "addBulletAmount": 6,
       "addDamageRate": -60,
       "addReloadSpeedSeconds": 0.25,
       "rarity": 2
@@ -207,6 +207,339 @@
       "addHpRate": 25,
       "addShieldCoolTimeRate": 0.25,
       "rarity": 2
+    },
+    {
+      "name": "アトラクト",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": 0.25,
+      "addAbillity": "シールド時に敵を吸い寄せる衝撃波を発生させる",
+      "rarity": 2
+    },
+    {
+      "name": "ガラスキャノン",
+      "addHpRate": -50,
+      "addDamageRate": 100,
+      "rarity": 2
+    },
+    {
+      "name": "クイックリロード",
+      "addReloadSpeedRate": -50,
+      "rarity": 2
+    },
+    {
+      "name": "ダッシュ",
+      "addMovingSpeedRate": 30,
+      "addHpRate": -25,
+      "rarity": 2
+    },
+    {
+      "name": "ディフェンダー",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": -20,
+      "rarity": 2
+    },
+    {
+      "name": "サテライト",
+      "addDamageRate": 50,
+      "addBulletSpeedRate": -30,
+      "addAbillity": "弾丸が重力の影響を受けなくなる",
+      "rarity": 2
+    },
+    {
+      "name": "スカベンジャー",
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "弾丸がヒットすると装弾数を半分回復する",
+      "rarity": 2
+    },
+    {
+      "name": "マッスルカウンター",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": 0.25,
+      "addAbillity": "シールド時に最大HPの12%のダメージを与える",
+      "rarity": 2
+    },
+    {
+      "name": "スピードデーモン",
+      "addHpDraimRate": 30,
+      "addAbillity": "弾丸がヒットすると4秒間移動速度+50%",
+      "rarity": 2
+    },
+    {
+      "name": "ヴァンパイア",
+      "addHpDraimRate": 20,
+      "addFireRate": -20,
+      "addAbillity": "弾丸がヒットすると弾丸の25%分のダメージを3秒間で与える",
+      "rarity": 2
+    },
+    {
+      "name": "ダメージカッター",
+      "addHpRate": 30,
+      "addAbillity": "どんなに高いダメージでも最大HPの半分までしか受けない",
+      "rarity": 2
+    },
+    {
+      "name": "ロケットジャンプ",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "addAbillity": "シールド時に爆発を起こしながら上に飛びあがる",
+      "rarity": 2
+    },
+    {
+      "name": "ケアフルプラン",
+      "addDamageRate": 100,
+      "addFireRate": -100,
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 2
+    },
+    {
+      "name": "グロー",
+      "addReloadSpeedSeconds": 0.25,
+      "addAbillity": "弾丸の滞空時間に応じてダメージが上昇する",
+      "rarity": 2
+    },
+    {
+      "name": "プロウラー",
+      "addShieldCoolTimeRate": -20,
+      "addAbillity": "弾丸がヒットすると自身のHPが4秒間+150%",
+      "rarity":2
+    },
+    {
+      "name": "フォートレス",
+      "addHpRate": 20,
+      "addAbillity": "ダメージを受けて4秒間ダメージを50%カット",
+      "rarity": 2
+    },
+    {
+      "name": "テレポート",
+      "addShieldCoolTimeRate": -30,
+      "addAbillity": "シールド時にテレポートする",
+      "rarity": 3
+    },
+    {
+      "name": "トキシッククラウド",
+      "addFireRate": -20,
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "着弾時に毒ガスを発生させる",
+      "rarity": 3
+    },
+    {
+      "name": "トリックスター",
+      "addBulletBounds":2,
+      "addDamageRate": 20,
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "跳弾時に弾丸ダメージが+50%される",
+      "rarity": 3
+    },
+    {
+      "name": "ホークアイ",
+      "addBulletSpeedRate": 70,
+      "addDamageRate" :100,
+      "addFireRate": -150,
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "弾丸の拡散が0になる",
+      "rarity": 3
+    },
+    {
+      "name": "タイタン",
+      "addHpRate": 120,
+      "addMovingSpeedRate": -20,
+      "addJumpHeightRate": -20,
+      "rarity": 3
+    },
+    {
+      "name": "リフレッシュ",
+      "addAbillity": "弾丸が敵にヒットするとシールドCDを即時回復する",
+      "rarity": 3
+    },
+    {
+      "name": "リロードシールド",
+      "addReloadSpeedSeconds": 0.5,
+      "addShieldCoolTimeRate": 0.5,
+      "addAbillity": "弾丸を打ち切った際にシールドを発動する",
+      "rarity": 3
+    },
+    {
+      "name": "オーバーブースト",
+      "addMovingSpeedRate": 50,
+      "addJumpHeightRate": 50,
+      "addFireRate": 50,
+      "addHpRate": -50,
+      "addDamageRate": -30,
+      "rarity": 3
+    },
+    {
+      "name": "フロストボム",
+      "addDamageRate": -20,
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "着弾時に周囲を凍結させるボムを出現",
+      "rarity": 3
+    },
+    {
+      "name": "スーパーノヴァ",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": 0.5,
+      "addAbillity": "シールド時に時間差で大爆発を起こす",
+      "rarity": 3
+    },
+    {
+      "name": "スラッシュ",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "addAbillity": "シールド時に持続的にダメージを与える衝撃波を出す",
+      "rarity": 3
+    },
+    {
+      "name": "タクティカルリロード",
+      "addShieldCoolTimeRate": 0.25,
+      "addAbillity": "シールド時に装弾数を回復する",
+      "rarity": 3
+    },
+    {
+      "name": "パルスソナー",
+      "addShieldCoolTimeRate": 0.5,
+      "addAbillity": "シールドCD完了時に3秒間マークと破壊を与える",
+      "rarity": 3
+    },
+    {
+      "name": "ドリルバレット",
+      "addReloadSpeedSeconds": 0.5,
+      "addAbillity": "弾丸が地形を貫通する",
+      "rarity": 3
+    },
+    {
+      "name": "バウンスレーザー",
+      "addAbillity": "跳弾時に前回の着弾地点に向けてレーザー",
+      "addBulletBounds":2,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ファイアワークス",
+      "addAbillity": "弾丸が一定の高さで花火",
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "リフレクトハウンド",
+      "addAbillity": "跳弾時に弾丸が一番近いプレイヤーのほうへ向く",
+      "addBulletBounds": 1,
+      "addDamageRate": -30,
+      "addFireRate": -30,
+      "rarity": 2
+    },
+    {
+      "name": "ドライブ",
+      "addAbillity": "一定範囲に他プレイヤーがいた場合、時間差で1度だけ向きを変える",
+      "addDamageRate": -50,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "リコン",
+      "addAbillity": "着弾地点をソナーを発生し、触れた相手に3秒間マークを与える",
+      "addBulletAmount": 1,
+      "addDamageRate": -10,
+      "rarity": 2
+    },
+    {
+      "name": "エアステップ",
+      "addNumberOfJump": 1,
+      "addFireRate": 20,
+      "addHpRate": -20,
+      "rarity": 1
+    },
+    {
+      "name": "アクアリング",
+      "addAbillity": "銃のリロード中に回復",
+      "addReloadSpeedSeconds": 0.5,
+      "addHpRate": 15,
+      "rarity": 1
+    },
+    {
+      "name": "アースクリスタル",
+      "addAbillity": "シールド時、地面からクリスタルを生成。消滅時にシールド効果発動",
+      "addReloadSpeedSeconds": 0.5,
+      "addHpRate": 20,
+      "rarity": 3
+    },
+    {
+      "name": "ドラゴンブラスト",
+      "addAbillity": "一定間隔で敵に接近し攻撃、命中時に装弾数を減少",
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 3
+    },
+    {
+      "name": "サモンソード",
+      "addAbillity": "射撃時に付近の敵の周囲に剣を生成し追加攻撃",
+      "rarity": 3
+    },
+    {
+      "name": "サンバースト",
+      "addAbillity": "シールド時にダメージと炎上を与える炎を発生させる",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "ライトニング",
+      "addAbillity": "着弾地点に0.75秒後に雷を落とす",
+      "addFireRate": -15,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "サイントラップ",
+      "addAbillity": "着弾地点にプレイヤーを感知して起動するトラップを生成",
+      "addDamageRate": -20,
+      "addFireRate": -10,
+      "rarity": 2
+    },
+    {
+      "name": "シャインリング",
+      "addAbillity": "シールド時に1秒後に付近にダメージを与えるリングを生成",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "フレアショック",
+      "addAbillity": "弾丸が減速していき、停まると爆発して加速する",
+      "addDamageRate": 15,
+      "addFireRate": -20,
+      "rarity": 2
+    },
+    {
+      "name": "ランスチャージ",
+      "addAbillity": "シールド時に時間差で前方に突進する",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ムーンストライク",
+      "addAbillity": "自動的に一定間隔で攻撃を行う",
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 3
+    },
+    {
+      "name": "ドローン",
+      "addAbillity": "自動的に一定間隔で攻撃を行うドローンを召喚",
+      "addDamageRate": -15,
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 3
+    },
+    {
+      "name": "エナジードリンク",
+      "addAbillity": "一定間隔で速度バフと連射バフを付与する",
+      "addReloadSpeedRate": -10,
+      "addHpRate": -20,
+      "rarity": 3
+    },
+    {
+      "name": "ぬいぐるみ",
+      "addAbillity": "他プレイヤーにプレゼントを渡す",
+      "addShieldCoolTimeRate": 0.5,
+      "rarity": 3
     }
   ]
 }

@@ -19,12 +19,12 @@
 
   $: borderColor = rarity === 1 ? '#808080' :  // 灰色
                    rarity === 2 ? '#87CEEB' :  // 水色
-                   rarity === 3 ? '#800080' :  // 紫色
+                   rarity === 3 ? '#500050' :  // 紫色
                    '#ddd';  // デフォルトの色
 </script>
 
 <div class="card" style:border-color={borderColor}>
-  <h3>{name}</h3>
+  <h3 style="color: {borderColor}">{name}</h3>
   <table class="stats">
     <tbody>
       {#if addHpRate !== undefined}
