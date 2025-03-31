@@ -20,14 +20,6 @@
 <div class="status-panel">
   <div class="header">
     <h2>ステータス</h2>
-    <div class="button-group">
-      <button class="show-cards-button" on:click={showSelectedCards}>
-        カード表示
-      </button>
-      <button class="reset-button" on:click={resetAll}>
-        リセット
-      </button>
-    </div>
   </div>
   <table class="stats">
     <tbody>
@@ -115,6 +107,16 @@
     上限値を把握してないものもあります。<br />
   　上限周りの処理は結構適当です。<br />
   </p>
+  <div class="button-group">
+    <button class="show-cards-button" on:click={showSelectedCards}>
+      カード {$selectedCardStore.length}枚選択中
+    </button>  
+  
+    <button class="reset-button" on:click={resetAll}>
+      リセット
+    </button>
+  </div>
+
 </div>
 
 <SelectedCardsDialog bind:isOpen={isDialogOpen} />
@@ -149,11 +151,12 @@
   .button-group {
     display: flex;
     gap: 0.5rem;
+    justify-content: space-between;
   }
 
   .reset-button {
     padding: 0.5rem 1rem;
-    background-color: #ff6b6b;
+    background-color: #ff0000;
     color: white;
     border: none;
     border-radius: 4px;

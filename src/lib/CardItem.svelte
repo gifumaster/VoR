@@ -1,5 +1,6 @@
 <script lang="ts">
   import { parameterStore, selectedCardStore } from './stores/parameterStore';
+  let isClicked = false;
   
   export let name = '';
   export let addHpRate: number | undefined = undefined;
@@ -25,7 +26,12 @@
                    rarity === 3 ? '#500050' :  // 紫色
                    '#ddd';  // デフォルトの色
 
-  function handleCardSelect() {
+  async function handleCardSelect() {
+    isClicked = true;
+    
+    // アニメーション完了を待つ
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
     parameterStore.applyCard({
       addHpRate,
       addHpDrainRate,
@@ -51,12 +57,19 @@
       addAbillity,
       rarity
     }]);
+    
+    isClicked = false;
   }
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
-<div class="card" style:border-color={borderColor} on:click={handleCardSelect}>
+<div 
+  class="card" 
+  class:clicked={isClicked}
+  style:border-color={borderColor} 
+  on:click={handleCardSelect}
+>
     <h3 style="color: {borderColor}">{name}</h3>
     <table class="stats">
       <tbody>
@@ -176,11 +189,31 @@
     overflow-y: auto;   /* 内容が多い場合はスクロール可能に */
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .card:hover {
     transform: scale(1.02);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .card.clicked {
+    animation: selectEffect 0.3s ease;
+  }
+
+  @keyframes selectEffect {
+    0% {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    50% {
+      transform: scale(0.95);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
   }
 
   h3 {
