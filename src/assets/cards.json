@@ -16,9 +16,9 @@
     },
     {
       "name": "ファストショット",
-      "addDamageRate": 120,
+      "addBulletSpeedRate": 120,
       "addFireRate": -50,
-      "addReloadSpeedSeconds": -0.25,
+      "addReloadSpeedSeconds": 0.25,
       "rarity": 1
     },
     {
@@ -41,7 +41,7 @@
     {
       "name": "タンク",
       "addHpRate": 75,
-      "addMovingSpeedRate": -50,
+      "addFireRate": -50,
       "addReloadSpeedSeconds": 0.25,
       "addShieldCoolTimeRate": 0.25,
       "rarity": 1
@@ -77,7 +77,7 @@
       "name": "カーブシューティング",
       "addAbillity": "弾丸にカーブする重力が付与される",
       "addDamageRate": 25,
-      "addBulletSpeedRate": -30,
+      "addReloadSpeedRate": -30,
       "rarity": 1
     },
     {
