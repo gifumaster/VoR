@@ -31,7 +31,7 @@
         <tr><td>HP:</td><td class:negative={addHpRate < 0}>{addHpRate > 0 ? '+' : ''}{addHpRate}%</td></tr>
       {/if}
       {#if addHpDraimRate !== undefined}
-        <tr><td>HP消費:</td><td class:negative={addHpDraimRate < 0}>{addHpDraimRate > 0 ? '+' : ''}{addHpDraimRate}%</td></tr>
+        <tr><td>HP吸収:</td><td class:negative={addHpDraimRate < 0}>{addHpDraimRate > 0 ? '+' : ''}{addHpDraimRate}%</td></tr>
       {/if}
       {#if addDamageRate !== undefined}
         <tr><td>ダメージ:</td><td class:negative={addDamageRate < 0}>{addDamageRate > 0 ? '+' : ''}{addDamageRate}%</td></tr>
