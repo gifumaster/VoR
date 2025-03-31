@@ -105,6 +105,9 @@
       </tr>
     </tbody>
   </table>
+  <p class="notice">
+    パラメータの上限はあまり調べてないので上限突破しがちです。詳細が分かり次第更新。    
+  </p>
 </div>
 
 <SelectedCardsDialog bind:isOpen={isDialogOpen} />
@@ -196,5 +199,10 @@
 
   .debuff {
     color: red;
+  }
+
+  .notice{
+    color:gray;
+    font-size: 0.8rem;
   }
 </style>
