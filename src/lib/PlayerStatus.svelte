@@ -1,16 +1,33 @@
 <script lang="ts">
-  import { parameterStore } from './stores/parameterStore';
+  import { parameterStore, selectedCardStore } from './stores/parameterStore';
+  import SelectedCardsDialog from './SelectedCardsDialog.svelte';
 
   // デフォルトのパラメータをインポート
   import defaultJson from '../assets/default.json';
+
+  let isDialogOpen = false;
+
+  function showSelectedCards() {
+    isDialogOpen = true;
+  }
+
+  function resetAll() {
+    parameterStore.reset();
+    selectedCardStore.set([]);
+  }
 </script>
 
 <div class="status-panel">
   <div class="header">
-    <h2>プレイヤーステータス</h2>
-    <button class="reset-button" on:click={() => parameterStore.reset()}>
-      リセット
-    </button>
+    <h2>ステータス</h2>
+    <div class="button-group">
+      <button class="show-cards-button" on:click={showSelectedCards}>
+        カード表示
+      </button>
+      <button class="reset-button" on:click={resetAll}>
+        リセット
+      </button>
+    </div>
   </div>
   <table class="stats">
     <tbody>
@@ -90,6 +107,8 @@
   </table>
 </div>
 
+<SelectedCardsDialog bind:isOpen={isDialogOpen} />
+
 <style>
   .status-panel {
     background-color: #fff;
@@ -117,6 +136,11 @@
     color: #333;
   }
 
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
   .reset-button {
     padding: 0.5rem 1rem;
     background-color: #ff6b6b;
@@ -128,8 +152,23 @@
     transition: background-color 0.2s;
   }
 
+  .show-cards-button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+
   .reset-button:hover {
     background-color: #ff5252;
+  }
+
+  .show-cards-button:hover {
+    background-color: #45a049;
   }
 
   .stats {

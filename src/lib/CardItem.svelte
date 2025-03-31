@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { parameterStore } from './stores/parameterStore';
+  import { parameterStore, selectedCardStore } from './stores/parameterStore';
   
   export let name = '';
   export let addHpRate: number | undefined = undefined;
@@ -42,6 +42,13 @@
       addNumberOfJump,
       addAbillity
     });
+
+    // 選択されたカードをストアに追加
+    selectedCardStore.update(cards => [...cards, {
+      name,
+      addAbillity,
+      rarity
+    }]);
   }
 </script>
 

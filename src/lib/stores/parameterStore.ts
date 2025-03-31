@@ -79,3 +79,4 @@ function createParameterStore() {
 }
 
 export const parameterStore = createParameterStore();
+export const selectedCardStore = writable<any[]>([]);
