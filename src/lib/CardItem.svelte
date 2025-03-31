@@ -86,7 +86,7 @@
         <tr><td>リロード速度:</td><td class:negative={addReloadSpeedSeconds > 0}>{addReloadSpeedSeconds > 0 ? '+' : ''}{addReloadSpeedSeconds} sec</td></tr>
       {/if}
       {#if addFireRate !== undefined}
-        <tr><td>発射速度:</td><td class:negative={addFireRate < 0}>{addFireRate > 0 ? '+' : ''}{addFireRate}%</td></tr>
+        <tr><td>連射速度:</td><td class:negative={addFireRate < 0}>{addFireRate > 0 ? '+' : ''}{addFireRate}%</td></tr>
       {/if}
       {#if addShieldCoolTimeRate !== undefined}
         <tr><td>シールドCD:</td><td class:negative={addShieldCoolTimeRate > 0}>{addShieldCoolTimeRate > 0 ? '+' : ''}{addShieldCoolTimeRate}%</td></tr>

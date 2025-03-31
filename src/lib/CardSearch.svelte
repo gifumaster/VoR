@@ -18,7 +18,7 @@
     { value: 'addReloadSpeedRate', label: 'リロード速度(%)' },
     { value: 'addReloadSpeedSeconds', label: 'リロード速度(Sec)' },
     { value: 'addShieldCoolTimeRate', label: 'シールドCD' },
-    { value: 'addFireRate', label: '発射速度' },
+    { value: 'addFireRate', label: '連射速度' },
     { value: 'addMovingSpeedRate', label: '移動速度' },
     { value: 'addJumpHeightRate', label: 'ジャンプ力' },
     { value: 'addNumberOfJump', label: 'ジャンプ回数' },

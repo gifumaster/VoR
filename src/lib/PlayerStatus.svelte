@@ -50,7 +50,7 @@
         </td>
       </tr>
       <tr>
-        <td>弾数:</td>
+        <td>装弾数:</td>
         <td class:buff={$parameterStore.bulletAmount > defaultJson.bulletAmount} class:debuff={$parameterStore.bulletAmount < defaultJson.bulletAmount}>
           {Math.floor($parameterStore.bulletAmount)}
         </td>
