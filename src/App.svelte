@@ -1,47 +1,38 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import CardSearch from './lib/CardSearch.svelte';
+  import CardGrid from './lib/CardGrid.svelte';
+  import cardJson from "./assets/cards.json";
+
+  let filteredCards = cardJson.cards;
+
+  function handleSearch(event: CustomEvent<{ query: string, statFilter: string }>) {
+    const { query, statFilter } = event.detail;
+    const searchText = query.toLowerCase();
+
+    filteredCards = cardJson.cards.filter(card => {
+      const nameMatch = card.name.toLowerCase().includes(searchText);
+      
+      if (!statFilter) {
+        return nameMatch;
+      }
+
+      const hasSelectedStat = card[statFilter] !== undefined;
+      return nameMatch && hasSelectedStat;
+    });
+  }
 </script>
 
 <main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <CardSearch on:search={handleSearch} />
+  <CardGrid cards={filteredCards} />
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
+  main {
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 </style>

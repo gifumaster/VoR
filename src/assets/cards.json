@@ -1,0 +1,212 @@
+{
+  "cards": [
+    {
+      "name": "マージ",
+      "addDamageRate": 100,
+      "addBulletAmount": -2,
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 1
+    },
+    {
+      "name": "ステディショット",
+      "addDamageRate": 20,
+      "addBulletSpeedRate": 40,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ファストショット",
+      "addDamageRate": 120,
+      "addReloadSpeedRate": -50,
+      "addReloadSpeedSeconds": -0.25,
+      "rarity": 1
+    },
+    {
+      "name": "マッスル",
+      "addHpRate": 40,
+      "rarity": 1
+    },
+    {
+      "name": "アンチグラビティ",
+      "addAbillity": "弾丸の落下方向が逆になる",
+      "addDamageRate": 50,
+      "rarity": 1
+    },
+    {
+      "name": "ハリーアップ",
+      "addReloadSpeedRate": -15,
+      "addShieldCoolTimeRate": -15,
+      "rarity": 1
+    },
+    {
+      "name": "タンク",
+      "addHpRate": 75,
+      "addMovingSpeedRate": -50,
+      "addReloadSpeedSeconds": 0.25,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "クイックショット",
+      "addBulletSpeedRate": 60,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "トリニティ",
+      "addBulletAmountPerShot": 2,
+      "addBulletAmount": 3,
+      "addDamageRate": -50,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ラビット",
+      "addJumpRate": 30,
+      "addReloadSpeedRate": -20,
+      "addHpRate": -15,
+      "rarity": 1
+    },
+    {
+      "name": "ビッグバレット",
+      "addHpRate": 10,
+      "addAbillity": "弾丸のサイズが大きくなる",
+      "rarity": 1
+    },
+    {
+      "name": "カーブシューティング",
+      "addAbillity": "弾丸にカーブする重力が付与される",
+      "addDamageRate": 25,
+      "addBulletSpeedRate": -30,
+      "rarity": 1
+    },
+    {
+      "name": "スプリット",
+      "addBulletAmount": 3,
+      "addBulletSpeedRate": 30,
+      "addDamageRate": -40,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ドレイン",
+      "addHpRate": 20,
+      "addHpDraimRate": 40,
+      "rarity": 1
+    },
+    {
+      "name": "ポイズンバレット",
+      "addAbillity": "弾丸がヒットすると弾丸の25%が毒ダメージを与える",
+      "addDamageRate": 15,
+      "addReloadSpeedRate": -15,
+      "addBulletAmount": -1,
+      "rarity": 1
+    },
+    {
+      "name": "コールドバレット",
+      "addAbillity": "弾丸がヒットすると移動速度の減少を与える",
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "フロストウェーブ",
+      "addAbillity": "シールド時に敵に凍結を付与する波を放つ",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ヒーリングスポット",
+      "addAbillity": "シールド時に回復エリアをフィールドに作成する",
+      "addHpRate": 20,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "バウンス",
+      "addBulletBounds": 2,
+      "addDamageRate": 20,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "シールドブースト",
+      "addAbillity": "シールド時に向いている方向に衝撃波を放つ",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "ブレイクバレット",
+      "addAbillity": "弾丸がヒットするとシールド不可を3秒間付与",
+      "addDamageRate": 20,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "タイムデトネーション",
+      "addAbillity": "着弾の0.5秒後に爆発する",
+      "addDamageRate": -15,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "パンチアウト",
+      "addAbillity": "弾丸がヒットするとノックバックを付与",
+      "addDamageRate": 10,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 1
+    },
+    {
+      "name": "スプレイ",
+      "addFireRate": 200,
+      "addDamageRate": -75,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "メイヘム",
+      "addBulletBounds": 5,
+      "addDamageRate": -15,
+      "addReloadSpeedSeconds": 0.5,
+      "rarity": 2
+    },
+    {
+      "name": "バレッジ",
+      "addBulletAmountPerShot": 4,
+      "addBulletAmount": 5,
+      "addDamageRate": -60,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "リコシュ",
+      "addAbillity": "跳弾するたびに速度が減少",
+      "addFireRate": 30,
+      "addBulletBounds": 2,
+      "addReloadSpeedSeconds": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "エクスプロード",
+      "addAbillity": "着弾時に爆発効果を付与",
+      "addFireRate": -35,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 2
+    },
+    {
+      "name": "ディレイ",
+      "addAbillity": "シールド時に時間差で再度シールドをする",
+      "addHpRate": 10,
+      "addShieldCoolTimeRate": 0.5,
+      "rarity": 2
+    },
+    {
+      "name": "プッシュエフェクト",
+      "addAbillity": "シールド時に敵を弾き飛ばす衝撃波を発生",
+      "addHpRate": 25,
+      "addShieldCoolTimeRate": 0.25,
+      "rarity": 2
+    }
+  ]
+}

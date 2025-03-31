@@ -1,0 +1,82 @@
+<script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+  let searchQuery = '';
+  let selectedStat = '';
+
+  const statOptions = [
+    { value: '', label: '全て' },
+    { value: 'addHpRate', label: 'HP' },
+    { value: 'addHpDraimRate', label: 'HP吸収' },
+    { value: 'addDamageRate', label: 'ダメージ' },
+    { value: 'addBulletAmount', label: '弾数' },
+    { value: 'addBulletSpeedRate', label: '弾速' },
+    { value: 'addBulletBounds', label: '跳弾回数' },
+    { value: 'addBulletAmountPerShot', label: '同時発射数' },
+    { value: 'addReloadSpeedRate', label: 'リロード速度(%)' },
+    { value: 'addReloadSpeedSeconds', label: 'リロード速度(Sec)' },
+    { value: 'addShieldCoolTimeRate', label: 'シールドCD' },
+    { value: 'addFireRate', label: '発射速度' },
+    { value: 'addMovingSpeedRate', label: '移動速度' },
+    { value: 'addJumpHeightRate', label: 'ジャンプ力' },
+    { value: 'addNumberOfJump', label: 'ジャンプ回数' },
+    { value: 'addAbillity', label: '特殊能力' }
+  ];
+
+  function handleSearch() {
+    dispatch('search', { 
+      query: searchQuery,
+      statFilter: selectedStat
+    });
+  }
+</script>
+
+<div class="search-container">
+  <input
+    type="text"
+    bind:value={searchQuery}
+    placeholder="カード名を検索..."
+    on:input={handleSearch}
+  />
+  <select 
+    bind:value={selectedStat}
+    on:change={handleSearch}
+  >
+    {#each statOptions as option}
+      <option value={option.value}>{option.label}</option>
+    {/each}
+  </select>
+</div>
+
+<style>
+  .search-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  input {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+</style>
