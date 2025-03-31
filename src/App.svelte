@@ -5,19 +5,37 @@
 
   let filteredCards = cardJson.cards;
 
-  function handleSearch(event: CustomEvent<{ query: string, statFilter: string }>) {
-    const { query, statFilter } = event.detail;
+  interface Card {
+    name: string;
+    rarity: number;
+    addHpRate?: number;
+    addHpDraimRate?: number;
+    addDamageRate?: number;
+    addBulletAmount?: number;
+    addBulletSpeedRate?: number;
+    addBulletBounds?: number;
+    addBulletAmountPerShot?: number;
+    addReloadSpeedRate?: number;
+    addReloadSpeedSeconds?: number;
+    addFireRate?: number;
+    addShieldCoolTimeRate?: number;
+    addMovingSpeedRate?: number;
+    addJumpHeightRate?: number;
+    addNumberOfJump?: number;
+    addAbillity?: string;
+    [key: string]: string | number | undefined;
+  }
+
+  function handleSearch(event: CustomEvent<{ query: string, statFilter: string, rarityFilter: string }>) {
+    const { query, statFilter, rarityFilter } = event.detail;
     const searchText = query.toLowerCase();
 
-    filteredCards = cardJson.cards.filter(card => {
+    filteredCards = (cardJson.cards as Card[]).filter(card => {
       const nameMatch = card.name.toLowerCase().includes(searchText);
+      const statMatch = !statFilter || card[statFilter] !== undefined;
+      const rarityMatch = !rarityFilter || (card.rarity === Number(rarityFilter));
       
-      if (!statFilter) {
-        return nameMatch;
-      }
-
-      const hasSelectedStat = card[statFilter] !== undefined;
-      return nameMatch && hasSelectedStat;
+      return nameMatch && statMatch && rarityMatch;
     });
   }
 </script>

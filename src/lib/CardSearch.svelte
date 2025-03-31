@@ -4,9 +4,10 @@
   const dispatch = createEventDispatcher();
   let searchQuery = '';
   let selectedStat = '';
+  let selectedRarity = '';
 
   const statOptions = [
-    { value: '', label: '全て' },
+    { value: '', label: 'フィルタ' },
     { value: 'addHpRate', label: 'HP' },
     { value: 'addHpDraimRate', label: 'HP吸収' },
     { value: 'addDamageRate', label: 'ダメージ' },
@@ -24,10 +25,18 @@
     { value: 'addAbillity', label: '特殊能力' }
   ];
 
+  const rarityOptions = [
+    { value: '', label: 'レアリティ:全て' },
+    { value: '1', label: 'コモン' },
+    { value: '2', label: 'レア' },
+    { value: '3', label: 'エピック' }
+  ];
+
   function handleSearch() {
     dispatch('search', { 
       query: searchQuery,
-      statFilter: selectedStat
+      statFilter: selectedStat,
+      rarityFilter: selectedRarity
     });
   }
 </script>
@@ -44,6 +53,14 @@
     on:change={handleSearch}
   >
     {#each statOptions as option}
+      <option value={option.value}>{option.label}</option>
+    {/each}
+  </select>
+  <select 
+    bind:value={selectedRarity}
+    on:change={handleSearch}
+  >
+    {#each rarityOptions as option}
       <option value={option.value}>{option.label}</option>
     {/each}
   </select>
