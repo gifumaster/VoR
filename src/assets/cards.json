@@ -492,7 +492,7 @@
       "name": "サイントラップ",
       "addAbillity": "着弾地点にプレイヤーを感知して起動するトラップを生成",
       "addDamageRate": -20,
-      "addFireRate": -10,
+      "addBulletSpeedRate": -10,
       "rarity": 2
     },
     {
