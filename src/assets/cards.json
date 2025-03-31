@@ -160,6 +160,7 @@
     {
       "name": "スプレイ",
       "addFireRate": 200,
+      "addBulletAmount": 10,
       "addDamageRate": -75,
       "addReloadSpeedSeconds": 0.25,
       "rarity": 2
