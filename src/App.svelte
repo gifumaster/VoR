@@ -72,7 +72,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-width: 1440px;
   }
 
   .content-wrapper {
@@ -80,16 +79,28 @@
     gap: 1rem;
     width: 100%;
     justify-content: center;
-    align-items: flex-start; /* コンテンツを上寄せに */
+    align-items: flex-start;
+    flex-wrap: wrap; /* フレックスアイテムを折り返し可能に */
   }
 
   :global(.content-wrapper > :first-child) {
     flex: 0 0 300px;
+    max-width: 250px; /* ステータスパネルの最大幅を設定 */
   }
 
   :global(.content-wrapper > :last-child) {
     flex: 1;
-    max-width: calc(100% - 300px - 2rem);
-    align-self: flex-start; /* カードグリッドを上寄せに */
+    min-width: 250px; /* カードの最小幅 */
+  }
+
+  @media (max-width: 768px) {
+    :global(.content-wrapper > :first-child) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    :global(.content-wrapper > :last-child) {
+      flex: 1 1 100%;
+    }
   }
 </style>

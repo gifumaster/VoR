@@ -82,6 +82,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap; /* 折り返し可能に */
   }
 
   input {
@@ -98,5 +99,17 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    min-width: 120px; /* セレクトボックスの最小幅を設定 */
+  }
+
+  @media (max-width: 768px) {
+    .search-container {
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+
+    input, select {
+      font-size: 0.9rem;
+    }
   }
 </style>

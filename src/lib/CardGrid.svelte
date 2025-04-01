@@ -18,13 +18,34 @@
 <style>
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 1rem;
     padding: 1rem;
-    padding-top:0;
+    padding-top: 0;
     width: 100%;
+    max-width: calc(250px * 4 + 3rem); /* 4列の最大幅（カード幅×4 + gap×3）*/
+    margin: 0 auto;
     justify-content: center;
-    align-content: start;    /* グリッド全体を上寄せ */
-    align-items: start;      /* 個々のカードを上寄せ */
+    align-content: start;
+    align-items: start;
+  }
+
+  /* 画面幅が狭い場合のカード幅調整 */
+  @media (max-width: 1200px) {
+    .card-grid {
+      max-width: calc(250px * 3 + 2rem);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .card-grid {
+      max-width: calc(250px * 2 + 1rem);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card-grid {
+      max-width: 250px;
+    }
   }
 </style>
