@@ -66,20 +66,23 @@
       "addBulletAmount": 3,
       "addDamageRate": -50,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "初期状態でとると1度に3発発射されるようになる。バレッジのほうがコストパフォーマンスが良い"
     },
     {
       "name": "ラビット",
       "addJumpHeightRate": 30,
       "addReloadSpeedRate": -20,
       "addHpRate": -15,
-      "rarity": 1
+      "rarity": 1,
+      "note": "貴重なジャンプ力を上げるカード。通常ジャンプでは届かない天井からでれるようになったりする。"
     },
     {
       "name": "ビッグバレット",
       "addHpRate": 10,
       "addAbillity": "弾丸のサイズが大きくなる",
-      "rarity": 1
+      "rarity": 1,
+      "note": "弾丸の周りに円状のエフェクトが発生して当たり判定が増えている模様\n 複数枚取るとより大きくなるが他に優先したいカードは多いので狙って取るのは難しい"
     },
     {
       "name": "カーブシューティング",
@@ -95,13 +98,15 @@
       "addBulletSpeedRate": 30,
       "addDamageRate": -40,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "ダメージの減少が思ったより大きいので注意。ダメージ下限で張り付いているときであれば取得をしても損はない"
     },
     {
       "name": "ドレイン",
       "addHpRate": 20,
       "addHpDrainRate": 40,
-      "rarity": 1
+      "rarity": 1,
+      "note": "デメリットがないカード。\nダメージ下限10の場合は4しか回復しないためできるだけ威力をあげて運用するとよさそう"
     },
     {
       "name": "ポイズンバレット",
@@ -109,38 +114,43 @@
       "addDamageRate": 15,
       "addReloadSpeedRate": -15,
       "addBulletAmount": -1,
-      "rarity": 1
+      "rarity": 1,
+      "note": "地味だがリロードも早くなるのがうれしいカード。\n装弾数が-1なので2枚とれば高速リロードビルドができる。"
     },
     {
       "name": "コールドバレット",
       "addAbillity": "ヒット時、移動速度の減少を与える",
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "1回でもあてることができればドライブやサモンソード、爆発などの攻撃を当てやすくなる。他の設置系のものと違い、HIT確認しやすいのもメリット"
     },
     {
       "name": "フロストウェーブ",
       "addAbillity": "シールド時、凍結を付与する波を放つ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "複数枚取ることで範囲が広がる。1枚だけだとほぼ密接していないと当たらないので可能であれば2枚以上積みたい"
     },
     {
       "name": "ヒーリングスポット",
       "addAbillity": "シールド時、回復エリアをフィールドに生成",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "他プレイヤーにも利用される可能性があるのでスラッシュやシャインリングなどのシナジーを利用するのもあり"
     },
     {
       "name": "バウンス",
       "addBulletBounds": 2,
       "addDamageRate": 20,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "序盤でとると射程を補うことができる。\n威力上昇はうれしいがHP100に対する確殺弾数は変わらない。これを取った後にダメージ減少を取ると損することが多い"
     },
     {
       "name": "シールドブースト",
-      "addAbillity": "シールド時、向いている方向に衝撃波を放つ",
+      "addAbillity": "シールド時、向いている方向に加速する",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
