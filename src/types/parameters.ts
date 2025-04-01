@@ -15,7 +15,7 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   bulletAmountPerShot: { min: 1, max: null },
   shieldCoolTimeSec: { min: 0, max: null },
   shieldCoolTimeRate: { min: 10, max: 100 },
-  fireRate: { min: 10, max: 400 },
+  fireRate: { min: 0, max: 100 },
   movingSpeed: { min: 10, max: null },
   jumpHeight: { min: 10, max: null },
   numberOfJump: { min: 1, max: null }
@@ -52,11 +52,14 @@ export function calculateNewParameterValue(
   currentValue: number,
   modifier: number,
   paramName: keyof typeof PARAMETER_LIMITS,
-  isPercentage: boolean = false
+  isPercentage: boolean = false,
+  isMultiplicative: boolean = false,
 ): number {
   let newValue = currentValue;
   
-  if (isPercentage) {
+  if (isMultiplicative) {
+    newValue = currentValue * modifier
+  } else if (isPercentage) {
     newValue = currentValue * (1 + modifier / 100);
   } else {
     newValue = currentValue + modifier;

@@ -54,7 +54,6 @@ function createParameterStore() {
         if (card.addBulletSpeedRate !== undefined) {
           newParams.bulletSpeed = calculateNewParameterValue(params.bulletSpeed, card.addBulletSpeedRate, 'bulletSpeed', true);
         }
-        console.info(card.addBulletSpeedRate,newParams.bulletSpeed)
         if (card.addBulletAmount !== undefined) {
           newParams.bulletAmount = calculateNewParameterValue(params.bulletAmount, card.addBulletAmount, 'bulletAmount', false);
         }
@@ -73,8 +72,16 @@ function createParameterStore() {
         newParams.shieldCoolTime =  newParams.shieldCoolTimeSec * (newParams.shieldCoolTimeRate === 100 ? 1:  newParams.shieldCoolTimeRate/100);
 
         if (card.addFireRate !== undefined) {
-          newParams.fireRate = calculateNewParameterValue(params.fireRate, card.addFireRate, 'fireRate', true);
+          //正数の場合
+          let m = undefined;
+          if(card.addFireRate > 0){
+            m = params.fireRate * -1 * (card.addFireRate / (100 + card.addFireRate));
+          }else{
+            m = params.fireRate * (-1* card.addFireRate / 100)
+          }
+          newParams.fireRate = calculateNewParameterValue(params.fireRate, m, 'fireRate', false);
         }
+
         if (card.addMovingSpeedRate !== undefined) {
           newParams.movingSpeed = calculateNewParameterValue(params.movingSpeed, card.addMovingSpeedRate, 'movingSpeed', true);
         }

@@ -12,7 +12,7 @@
     "shieldCoolTime": 3,
     "shieldCoolTimeSec": 3,
     "shieldCoolTimeRate": 100,
-    "fireRate": 100,
+    "fireRate": 0.35,
     "movingSpeed": 100,
     "jumpHeight": 100,
     "numberOfJump": 1
