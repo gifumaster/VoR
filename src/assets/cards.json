@@ -153,28 +153,32 @@
       "addAbillity": "シールド時、向いている方向に加速する",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "上方向を見ることで斜めに飛ぶこともできる。\n複数枚取ると移動距離が延びるので急接近や離脱に最適だが、安置が縮小した状態になると範囲外に出てしまいやすく使いにくい"
     },
     {
       "name": "ブレイクバレット",
       "addAbillity": "ヒット時、シールド不可を3秒間付与",
       "addDamageRate": 20,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "シールドビルドに対するアンチリーサルウェポン\nシールドビルドを組んでいるプレイヤーがいるときは是非確保したいカード"
     },
     {
       "name": "タイムデトネーション",
       "addAbillity": "着弾の0.5秒後に爆発する",
       "addDamageRate": -15,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "複数枚取ると爆発が大きくなる。\n0.5秒というのが長いため、移動先を読んで打つ or 回避できないほどにばら撒くのがよい\n設置型エフェクトの仕様として同時に発生させることのできる数に上限があるので注意"
     },
     {
       "name": "パンチアウト",
       "addAbillity": "ヒット時、ノックバックを付与",
       "addDamageRate": 10,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "複数枚取れば場外ダメージで倒せるほど遠くに吹き飛ばすことができる。1枚ではあまり効果がないので注意"
     },
     {
       "name": "スプレイ",
@@ -182,14 +186,16 @@
       "addBulletAmount": 10,
       "addDamageRate": -75,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "人気のマシンガン。\n初期に取った場合はダメージ下限の10になることは覚えておいて損はない。\n着弾系、ホーミング系、跳弾系と幅広くシナジーが見込める良カード"
     },
     {
       "name": "メイヘム",
       "addBulletBounds": 5,
       "addDamageRate": -15,
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 2
+      "rarity": 2,
+      "note": "これ1枚で跳弾回数は過剰なぐらい増えるが、バウンス2枚のほうがバランスよく強くなることが多い。\n着弾系のカードと相性が良いがエフェクトの上限に引っ掛かりやすくなる点も注意"
     },
     {
       "name": "バレッジ",
@@ -197,7 +203,8 @@
       "addBulletAmount": 6,
       "addDamageRate": -60,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "トリニティの効果が2倍になったもの。デメリットはダメージ減少が10ポイント大きいだけ。\nスプレイと組み合わせることで一気にばら撒きを増やすことができる。取るなら序盤に確保したい。"
     },
     {
       "name": "リコシュ",
@@ -205,142 +212,164 @@
       "addFireRate": 30,
       "addBulletBounds": 2,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "付近に着弾しやすくなるため、エクスプロードやライトニングを固めて落とすことができる\nこれだけでは火力増加につながらないので取るのであればシナジー先のカードを考えておこう"
     },
     {
       "name": "エクスプロード",
       "addAbillity": "着弾時に爆発効果を付与",
       "addFireRate": -35,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "タイムデトネーションと違い、着弾後すぐに爆発が発生する。プレイヤーに当たった場合は爆発が発生しないため、ばら撒きビルドのほうが相性が良い\nこちらも複数枚取ることで爆発の範囲が大きくなる。"
     },
     {
       "name": "ディレイ",
       "addAbillity": "シールド時、時間差で再度シールドをする",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.5,
-      "rarity": 2
+      "rarity": 2,
+      "note": "シールドビルドのお供。あらゆるシールドが2回発動するのでテレポートやシールドブーストを持っているときは挙動に注意しよう"
     },
     {
       "name": "プッシュエフェクト",
       "addAbillity": "シールド時、敵を弾き飛ばす衝撃波を発生",
       "addHpRate": 25,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "自分を中心に円形の衝撃波が発生する\n当てなくてもいいパンチアウト。複数枚取ることで範囲と吹き飛ばし距離を増やすことができる"
     },
     {
       "name": "アトラクト",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時、敵を吸い寄せる衝撃波を発生させる",
-      "rarity": 2
+      "rarity": 2,
+      "note": "プッシュエフェクトとは逆に、敵を引き寄せるシールド\n マッスルカウンターやスーパーノヴァなどを当てやすくなる"
     },
     {
       "name": "ガラスキャノン",
       "addHpRate": -50,
       "addDamageRate": 100,
-      "rarity": 2
+      "rarity": 2,
+      "note": "HPが大幅にさがるが弾威力が倍になるカード\nケアフルプランとよく比較されるが好みの問題。ダメージカッターを取るなどでHP対策をしたい"
     },
     {
       "name": "クイックリロード",
       "addReloadSpeedRate": -50,
-      "rarity": 2
+      "rarity": 2,
+      "note": "特にデメリットのないクイックリロード。とりあえず取っておいても問題ないカード。\nこれを1枚もっていると他カードすべてのリロード時間追加が半分になる、と考えると強すぎるカード"
     },
     {
       "name": "ダッシュ",
       "addMovingSpeedRate": 30,
       "addHpRate": -25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "貴重な移動速度上昇カード\n広いマップで有利に立ち回ることができる。\nタイタンカードのマイナスを打ち消せそうで逆に良いところ削ってしまうので気を付けよう"
     },
     {
       "name": "ディフェンダー",
       "addHpRate": 20,
       "addShieldCoolTimeRate": -20,
-      "rarity": 2
+      "rarity": 2,
+      "note": "デメリットのない、かつ貴重なCD削減できるカード。\nシールドビルドならとりあえず取っておけば間違いない"
     },
     {
       "name": "サテライト",
       "addDamageRate": 50,
       "addBulletSpeedRate": -30,
       "addAbillity": "弾丸が重力の影響を受けなくなる",
-      "rarity": 2
+      "rarity": 2,
+      "note": "弾が真っすぐ飛ぶようになる。ドリルバレットやカーブシューティングと組み合わせることが可能。\n弾速が思った以上に遅くなるためそのままだとほとんど当てられなくなってしまうので弾速をなるべく増やすカードを取ろう\nちなみに弾速の下限は初期弾速の1/10、歩行スピードの1/3である。"
     },
     {
       "name": "スカベンジャー",
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "ヒット時、装弾数を半分回復する",
-      "rarity": 2
+      "rarity": 2,
+      "note": "スプレイとの相性は抜群。当て続けることで絶え間なく弾幕を展開することができる。一方でリロードが発生しにくくなるためリロードビルドは注意が必要"
     },
     {
       "name": "マッスルカウンター",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時、最大HPの12%のダメージを与える爆発",
-      "rarity": 2
+      "rarity": 2,
+      "note": "一時期猛威を振るったタンクビルドのキーカード、威力が下がり、発動にディレイがついたものの、最大120のダメージを与えるシールドは脅威\n 複数枚取ることで範囲が広がる"
     },
     {
       "name": "スピードデーモン",
       "addHpDrainRate": 30,
       "addAbillity": "ヒット時、すると4秒間移動速度+50%",
-      "rarity": 2
+      "rarity": 2,
+      "note": "短期間の移動速度バフ。一撃離脱に使用できるか\nなにげにおまけでついてくるHP吸収効果も強い"
     },
     {
       "name": "ヴァンパイア",
       "addHpDrainRate": 20,
       "addFireRate": -20,
       "addAbillity": "ヒット時、3秒間で弾丸の25%分のダメージ",
-      "rarity": 2
+      "rarity": 2,
+      "note": "回復＋毒のカード。継続ダメージでは敵を倒しきることはできない。"
     },
     {
       "name": "ダメージカッター",
       "addHpRate": 30,
       "addAbillity": "1度に最大HPの半分までしかダメージを受けない",
-      "rarity": 2
+      "rarity": 2,
+      "note": "たとえ威力1000の弾丸であってもHPの半分が残るという超防御カードだが、ばら撒き系ビルドとは相性が悪い。"
     },
     {
       "name": "ロケットジャンプ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時、爆発を起こし上に飛びあがる",
-      "rarity": 2
+      "rarity": 2,
+      "note": "離脱系シールド、あまり使ったことがないので評価できず"
     },
     {
       "name": "ケアフルプラン",
       "addDamageRate": 100,
       "addFireRate": -100,
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 2
+      "rarity": 2,
+      "note": "ガラスキャノンと違い、1発のダメージは上がるがDPSは下がるカード。マージ・ケアフルプラン・ガラスキャン、プレイスタイルによって使い分けよう"
     },
     {
       "name": "グロー",
       "addReloadSpeedSeconds": 0.25,
       "addAbillity": "弾丸の滞空時間に応じてダメージが上昇する",
-      "rarity": 2
+      "rarity": 2,
+      "note": "弾速を減少させたり、跳弾させたり、フレアショックと組み合わせることで威力を上げやすくなる"
     },
     {
       "name": "プロウラー",
       "addShieldCoolTimeRate": -20,
       "addAbillity": "ヒット時、自身のHPを4秒間+150%",
-      "rarity":2
+      "rarity":2,
+      "note": "CD減少効果がうれしい。\n上限HP1000の壁を超えることができるのでマッスルカウンタービルドならあってもよいカード"
     },
     {
       "name": "フォートレス",
       "addHpRate": 20,
       "addAbillity": "被弾後、4秒間ダメージを50%カット",
-      "rarity": 2
+      "rarity": 2,
+      "note": "ばら撒き系ビルドに対するディフェンスカード。\n初弾のダメージは100%食らうので1発が重たいプレイヤーの攻撃には対処できない"
     },
     {
       "name": "テレポート",
       "addShieldCoolTimeRate": -30,
       "addAbillity": "シールド時、テレポートする",
-      "rarity": 3
+      "rarity": 3,
+      "note": "使用時にどこか付近にテレポートする。酔いに注意しよう。後半の縮小円では敵を見失いやすく、範囲から出やすくなるため使いにくい。このカードのCD削減効果はカードの中では最大値である。"
     },
     {
       "name": "トキシッククラウド",
       "addFireRate": -20,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "着弾時に毒ガスを発生させる",
-      "rarity": 3
+      "rarity": 3,
+      "note": "大量にまき散らしたくなるが同時発生数の制限があるため過度に増やすと逆に弱くなる。\n 複数枚取ることで毒ガスのサイズが大きくなる"
     },
     {
       "name": "トリックスター",
@@ -348,7 +377,8 @@
       "addDamageRate": -20,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "跳弾時に弾丸ダメージが+50%される",
-      "rarity": 3
+      "rarity": 3,
+      "note": "20%ひかれて50%増えるので30%増えると思いきや実質は40->48と20%しか増えない。ダメージ下限の仕様を利用してダメージの増加の恩恵を最大限に受けられるようにしたい"
     },
     {
       "name": "ホークアイ",
@@ -357,26 +387,30 @@
       "addFireRate": -150,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "弾丸の拡散が0になる",
-      "rarity": 3
+      "rarity": 3,
+      "note": "拡散が0になる、というのは同時発射される弾がすべて同じ方向に重なって出る、ということ。\n ばら撒いてプレッシャーをかけるビルドとは相性が悪い"
     },
     {
       "name": "タイタン",
       "addHpRate": 120,
       "addMovingSpeedRate": -20,
       "addJumpHeightRate": -20,
-      "rarity": 3
+      "rarity": 3,
+      "note": "驚異のHP上昇率だが、動きが重戦車のように遅くなる。一方的に翻弄される可能性があるので注意"
     },
     {
       "name": "リフレッシュ",
       "addAbillity": "ヒット時、シールドCDを即時回復する",
-      "rarity": 3
+      "rarity": 3,
+      "note": "当て続けることでシールドを無限に発動できる。スカベンジャーやタクティカルリロードなど、相性の良いカードがたくさんある"
     },
     {
       "name": "リロードシールド",
       "addReloadSpeedSeconds": 0.5,
       "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "弾丸を打ち切った際にシールドを発動する",
-      "rarity": 3
+      "rarity": 3,
+      "note": "タクティカルリロードと組み合わせは強力"
     },
     {
       "name": "オーバーブースト",
@@ -385,59 +419,68 @@
       "addFireRate": 50,
       "addHpRate": -50,
       "addDamageRate": -30,
-      "rarity": 3
+      "rarity": 3,
+      "note": "機動力と引き換えに火力と紙装甲を得るカード"
     },
     {
       "name": "フロストボム",
       "addDamageRate": -20,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "着弾時に周囲を凍結させるボムを出現",
-      "rarity": 3
+      "rarity": 3,
+      "note": "このボムは自分も影響があるので、跳弾などでばら撒くときは自分も引っ掛からないように注意する必要がある"
     },
     {
       "name": "スーパーノヴァ",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "シールド時、時間差で大爆発を起こす",
-      "rarity": 3
+      "rarity": 3,
+      "note": "一定時間後に爆発を起こす。マッスルカウンターと違いダメージは弾丸依存。複数取ることで範囲が増加する"
     },
     {
       "name": "スラッシュ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時、持続ダメージAoEを自分の周りに生成",
-      "rarity": 3
+      "rarity": 3,
+      "note": "かまいたちのようなエフェクトが発生し持続ダメージを発生させる。シールドブーストやランスチャージで相手に張り付くようにしよう"
     },
     {
       "name": "タクティカルリロード",
       "addShieldCoolTimeSeconds": 0.25,
       "addAbillity": "シールド時、装弾数を回復する",
-      "rarity": 3
+      "rarity": 3,
+      "note": "シールドするたびにリロードが勝手にされるTier1カード。どれだけリロードタイムが伸びようと問題なく、考えられるシナジーは山のようにある"
     },
     {
       "name": "パルスソナー",
       "addShieldCoolTimeSeconds": 0.5,
       "addAbillity": "シールドCD完了時、周囲の敵に3秒間マークと破壊を付与",
-      "rarity": 3
+      "rarity": 3,
+      "note": "以前は壁越しでも敵の位置がわかるだけのカードだったが、破壊効果(被ダメージ50%アップ)が付いたため攻撃的なシールドとして使うことができるようになった"
     },
     {
       "name": "ドリルバレット",
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "弾丸が地形を貫通する",
-      "rarity": 3
+      "rarity": 3,
+      "note": "物故割れだったレーザーの代わりに実装されたカード。地形を貫通するため跳弾系のカードと相性が悪い。サテライト、ドライブなどのカードと組み合わせて相手の見えない位置から攻撃しよう"
     },
     {
       "name": "バウンスレーザー",
       "addAbillity": "跳弾時に前回の着弾地点に向けてレーザー",
       "addBulletBounds":2,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "複数枚取るとレーザーは太くなる"
     },
     {
       "name": "ファイアワークス",
       "addAbillity": "弾丸が一定の高さで花火を出す",
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "綺麗"
     },
     {
       "name": "リフレクトハウンド",
@@ -445,121 +488,139 @@
       "addBulletBounds": 1,
       "addDamageRate": -30,
       "addFireRate": -30,
-      "rarity": 2
+      "rarity": 2,
+      "note": "さながら犬のように敵を追いかけるホーミング弾。複数回の跳弾を行うことでさらに敵を狙うことができる。\nただし、付近にプレイヤーがいない場合、自分に向かって飛んでくるので注意"
     },
     {
       "name": "ドライブ",
       "addAbillity": "一定範囲に他プレイヤーがいた場合、時間差で1度だけ向きを変える",
       "addDamageRate": -50,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "リフレクトハウンドと違い、自分に向かってくることはない。"
     },
     {
       "name": "リコン",
       "addAbillity": "着弾地点をソナーを発生し、触れた相手に3秒間マークを与える",
       "addBulletAmount": 1,
       "addDamageRate": -10,
-      "rarity": 2
+      "rarity": 2,
+      "note": "1枚だとソナー範囲が狭いため、複数枚取って確実にマークできるようにしたい。地味に装弾数が1増える。"
     },
     {
       "name": "エアステップ",
       "addNumberOfJump": 1,
       "addFireRate": 20,
       "addHpRate": -20,
-      "rarity": 1
+      "rarity": 1,
+      "note": "ジャンプ回数を増やすことができる唯一のカード、ただし壁ジャンプで代替可能な局面は狙って取るメリットはない。壁ジャンプではジャンプ回数は回復しない"
     },
     {
       "name": "アクアリング",
       "addAbillity": "銃のリロード中に回復",
       "addReloadSpeedSeconds": 0.5,
       "addHpRate": 15,
-      "rarity": 1
+      "rarity": 1,
+      "note": "リロード中、1秒間隔で最大HPの1%分の回復をする。複数枚取ると枚数分回復量が増える"
     },
     {
       "name": "アースクリスタル",
       "addAbillity": "シールド時、地面からクリスタルを生成。消滅時にシールド効果発動",
       "addReloadSpeedSeconds": 0.5,
       "addHpRate": 20,
-      "rarity": 3
+      "rarity": 3,
+      "note": "クリスタルは小さいので壁としてはあまり信用ができない。シールドを複数枚重ねて発動させたい"
     },
     {
       "name": "ドラゴンブラスト",
       "addAbillity": "一定間隔で敵に接近し攻撃、命中時に装弾数を減少",
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 3
+      "rarity": 3,
+      "note": ""
     },
     {
       "name": "サモンソード",
       "addAbillity": "射撃時に付近の敵の周囲に剣を生成し追加攻撃",
-      "rarity": 3
+      "rarity": 3,
+      "note": "弾を打つたびに周囲の敵にドーム状に剣を生成し、敵に向かって飛んでいく。剣の攻撃力は弾丸のダメージ依存。コールドバレットとの相性は抜群"
     },
     {
       "name": "サンバースト",
       "addAbillity": "シールド時にダメージと炎上を与える炎を発生させる",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "壁を貫通するためマップによっては敵の死角から当てることができる"
     },
     {
       "name": "ライトニング",
       "addAbillity": "着弾地点に0.75秒後に雷を落とす",
       "addFireRate": -15,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "0.75秒後のため、地上の敵を狙うというよりは上部に居座っていたり、飛び回っているプレイヤーを狙うために使うと効果的"
     },
     {
       "name": "サイントラップ",
       "addAbillity": "着弾地点にプレイヤーを感知して起動するトラップを生成",
       "addDamageRate": -20,
       "addBulletSpeedRate": -10,
-      "rarity": 2
+      "rarity": 2,
+      "note": "着弾地点に標識が表示される。"
     },
     {
       "name": "シャインリング",
       "addAbillity": "シールド時に1秒後に付近にダメージを与えるリングを生成",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 2
+      "rarity": 2,
+      "note": "スラッシュと違い、発動した地点にとどまり続けるリング"
     },
     {
       "name": "フレアショック",
       "addAbillity": "弾丸が減速していき、停まると爆発して加速する",
       "addDamageRate": 15,
       "addFireRate": -20,
-      "rarity": 2
+      "rarity": 2,
+      "note": "定期的に爆発しながら進んでいく弾丸になる。爆発が大きいためプレッシャーになる"
     },
     {
       "name": "ランスチャージ",
       "addAbillity": "シールド時に時間差で前方に突進する",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "ランスを持ちながら前進する。ランスにはダメージ判定アリ。"
     },
     {
       "name": "ムーンストライク",
       "addAbillity": "自動的に一定間隔で攻撃を行う",
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 3
+      "rarity": 3,
+      "note":"上部に球体がつねにつきまとうようになるため、自身の位置が敵からバレやすい"
     },
     {
       "name": "ドローン",
       "addAbillity": "自動的に一定間隔で攻撃を行うドローンを召喚",
       "addDamageRate": -15,
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 3
+      "rarity": 3,
+      "note": ""
     },
     {
       "name": "エナジードリンク",
       "addAbillity": "一定間隔で速度バフと連射バフを付与する",
       "addReloadSpeedRate": -10,
       "addHpRate": -20,
-      "rarity": 3
+      "rarity": 3,
+      "note" : ""
     },
     {
       "name": "ぬいぐるみ",
       "addAbillity": "他プレイヤーにプレゼントを渡す",
       "addShieldCoolTimeSeconds": 0.5,
-      "rarity": 3
+      "rarity": 3,
+      "note" : ""
     }
   ]
 }
