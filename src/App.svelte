@@ -80,17 +80,17 @@
     width: 100%;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* フレックスアイテムを折り返し可能に */
   }
 
   :global(.content-wrapper > :first-child) {
     flex: 0 0 300px;
-    max-width: 250px; /* ステータスパネルの最大幅を設定 */
+    min-width: 250px;
+    max-width: 300px; /* ステータスパネルの最大幅を設定 */
   }
 
   :global(.content-wrapper > :last-child) {
     flex: 1;
-    min-width: 250px; /* カードの最小幅 */
+    min-width: 200px; /* カードの最小幅 */
   }
 
   @media (max-width: 768px) {

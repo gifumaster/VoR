@@ -23,29 +23,11 @@
     padding: 1rem;
     padding-top: 0;
     width: 100%;
-    max-width: calc(250px * 4 + 3rem); /* 4列の最大幅（カード幅×4 + gap×3）*/
+    max-width: 100vw;
     margin: 0 auto;
     justify-content: center;
     align-content: start;
     align-items: start;
   }
 
-  /* 画面幅が狭い場合のカード幅調整 */
-  @media (max-width: 1200px) {
-    .card-grid {
-      max-width: calc(250px * 3 + 2rem);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .card-grid {
-      max-width: calc(250px * 2 + 1rem);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .card-grid {
-      max-width: 250px;
-    }
-  }
 </style>
