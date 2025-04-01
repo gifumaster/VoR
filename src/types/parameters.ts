@@ -10,7 +10,7 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   reloadSpeedSec: { min: 0, max: null },
   reloadSpeedRate: { min: 10, max: null },
   bulletSpeed: { min: 10, max: 450 },
-  bulletAmount: { min: 1, max: null },
+  bulletAmount: { min: 1, max: 20 },
   bulletBounds: { min: 0, max: null },
   bulletAmountPerShot: { min: 1, max: null },
   shieldCoolTimeSec: { min: 0, max: null },
