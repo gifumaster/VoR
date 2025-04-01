@@ -19,10 +19,10 @@
 
 <div class="status-panel">
   <div class="header">
-    <h2>ステータス</h2>
+    <h3>ステータス</h3>
     <div class="button-group">
       <button class="show-cards-button" on:click={showSelectedCards}>
-        {$selectedCardStore.length}枚選択中
+        {$selectedCardStore.length}枚選択
       </button>      
       <button class="reset-button" on:click={resetAll}>
         リセット
