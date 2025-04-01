@@ -88,7 +88,7 @@
       </tr>
       <tr>
         <td>連射速度:</td>
-        <td class:buff={$parameterStore.fireRate > defaultJson.fireRate} class:debuff={$parameterStore.fireRate < defaultJson.fireRate}>
+        <td class:buff={$parameterStore.fireRate < defaultJson.fireRate} class:debuff={$parameterStore.fireRate > defaultJson.fireRate}>
           {Math.floor(100 * (1 / $parameterStore.fireRate))/100}/sec
           ({Math.floor($parameterStore.fireRate * 100) / 100})
         </td>
