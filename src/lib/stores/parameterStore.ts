@@ -54,6 +54,7 @@ function createParameterStore() {
         if (card.addBulletSpeedRate !== undefined) {
           newParams.bulletSpeed = calculateNewParameterValue(params.bulletSpeed, card.addBulletSpeedRate, 'bulletSpeed', true);
         }
+        console.info(card.addBulletSpeedRate,newParams.bulletSpeed)
         if (card.addBulletAmount !== undefined) {
           newParams.bulletAmount = calculateNewParameterValue(params.bulletAmount, card.addBulletAmount, 'bulletAmount', false);
         }

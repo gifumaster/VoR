@@ -102,7 +102,7 @@
           <tr><td>ダメージ:</td><td>+{addDamageRate}%</td></tr>
         {/if}
         {#if addBulletAmount !== undefined && addBulletAmount > 0}
-          <tr><td>弾数:</td><td>+{addBulletAmount}</td></tr>
+          <tr><td>装弾数:</td><td>+{addBulletAmount}</td></tr>
         {/if}
         {#if addBulletSpeedRate !== undefined && addBulletSpeedRate > 0}
           <tr><td>弾速:</td><td>+{addBulletSpeedRate}%</td></tr>
@@ -149,7 +149,7 @@
           <tr><td>ダメージ:</td><td class="negative">{addDamageRate}%</td></tr>
         {/if}
         {#if addBulletAmount !== undefined && addBulletAmount < 0}
-          <tr><td>弾数:</td><td class="negative">{addBulletAmount}</td></tr>
+          <tr><td>装弾数:</td><td class="negative">{addBulletAmount}</td></tr>
         {/if}
         {#if addBulletSpeedRate !== undefined && addBulletSpeedRate < 0}
           <tr><td>弾速:</td><td class="negative">{addBulletSpeedRate}%</td></tr>
@@ -344,6 +344,8 @@
     max-width: 500px;
     width: 90%;
     color: black;
+    white-space: pre-wrap;
+    text-align: left;
   }
 
   .note-dialog h3 {
