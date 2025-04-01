@@ -10,11 +10,15 @@ function createParameterStore() {
     hpDrain: defaultJson.hpDrain,
     damege: defaultJson.damege,
     reloadSpeed: defaultJson.reloadSpeed,
+    reloadSpeedRate: defaultJson.reloadSpeedRate,
+    reloadSpeedSec: defaultJson.reloadSpeedSec,
     bulletSpeed: defaultJson.bulletSpeed,
     bulletAmount: defaultJson.bulletAmount,
     bulletBounds: defaultJson.bulletBounds,
     bulletAmountPerShot: defaultJson.bulletAmountPerShot,
     shieldCoolTime: defaultJson.shieldCoolTime,
+    shieldCoolTimeRate: defaultJson.shieldCoolTimeRate,
+    shieldCoolTimeSec: defaultJson.shieldCoolTimeSec,
     fireRate: defaultJson.fireRate,
     movingSpeed: defaultJson.movingSpeed,
     jumpHeight: defaultJson.jumpHeight,
@@ -40,11 +44,13 @@ function createParameterStore() {
           newParams.damege = calculateNewParameterValue(params.damege, card.addDamageRate, 'damege', true);
         }
         if (card.addReloadSpeedRate !== undefined) {
-          newParams.reloadSpeed = calculateNewParameterValue(params.reloadSpeed, card.addReloadSpeedRate, 'reloadSpeed', true);
+          newParams.reloadSpeedRate = calculateNewParameterValue(params.reloadSpeedRate, card.addReloadSpeedRate, 'reloadSpeedRate', true);
         }
         if (card.addReloadSpeedSeconds !== undefined) {
-          newParams.reloadSpeed = calculateNewParameterValue(params.reloadSpeed, card.addReloadSpeedSeconds, 'reloadSpeed', false);
+          newParams.reloadSpeedSec = calculateNewParameterValue(params.reloadSpeedSec, card.addReloadSpeedSeconds, 'reloadSpeedSec', false);
         }
+        newParams.reloadSpeed =  newParams.reloadSpeedSec * (newParams.reloadSpeedRate === 100 ? 1:  newParams.reloadSpeedRate/100);
+
         if (card.addBulletSpeedRate !== undefined) {
           newParams.bulletSpeed = calculateNewParameterValue(params.bulletSpeed, card.addBulletSpeedRate, 'bulletSpeed', true);
         }
@@ -58,11 +64,13 @@ function createParameterStore() {
           newParams.bulletAmountPerShot = calculateNewParameterValue(params.bulletAmountPerShot, card.addBulletAmountPerShot, 'bulletAmountPerShot', false);
         }
         if (card.addShieldCoolTimeRate !== undefined) {
-          newParams.shieldCoolTime = calculateNewParameterValue(params.shieldCoolTime, card.addShieldCoolTimeRate, 'shieldCoolTime', true);
+          newParams.shieldCoolTimeRate = calculateNewParameterValue(params.shieldCoolTimeRate, card.addShieldCoolTimeRate, 'shieldCoolTimeRate', true);
         }
         if (card.addShieldCoolTimeSeconds !== undefined) {
-          newParams.shieldCoolTime = calculateNewParameterValue(params.shieldCoolTime, card.addShieldCoolTimeSeconds, 'shieldCoolTime', false);
+          newParams.shieldCoolTimeSec = calculateNewParameterValue(params.shieldCoolTimeSec, card.addShieldCoolTimeSeconds, 'shieldCoolTimeSec', false);
         }        
+        newParams.shieldCoolTime =  newParams.shieldCoolTimeSec * (newParams.shieldCoolTimeRate === 100 ? 1:  newParams.shieldCoolTimeRate/100);
+
         if (card.addFireRate !== undefined) {
           newParams.fireRate = calculateNewParameterValue(params.fireRate, card.addFireRate, 'fireRate', true);
         }

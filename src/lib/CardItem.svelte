@@ -2,6 +2,7 @@
   import { parameterStore, selectedCardStore } from './stores/parameterStore';
   let isClicked = false;
   let isDisabled = false;
+  let showNote = false;
   
   export let name = '';
   export let addHpRate: number | undefined = undefined;
@@ -21,6 +22,7 @@
   export let addJumpHeightRate: number | undefined = undefined;
   export let addAbillity: string | undefined = undefined;
   export let rarity: number | undefined = undefined;
+  export let note: string | undefined = undefined;
 
   $: borderColor = rarity === 1 ? '#808080' :  // 灰色
                    rarity === 2 ? '#87CEEB' :  // 水色
@@ -65,6 +67,15 @@
     }]);
     
     isClicked = false;
+  }
+
+  function toggleNote(event: MouseEvent) {
+    event.stopPropagation(); // カードの選択を防ぐ
+    showNote = true;
+  }
+
+  function closeNote() {
+    showNote = false;
   }
 </script>
 
@@ -180,7 +191,24 @@
         {addAbillity}
       </p>
     {/if}
+    {#if note}
+      <button class="note-icon" on:click={toggleNote}>
+        <span class="icon">ⓘ</span>
+      </button>
+    {/if}
   </div>
+
+{#if showNote && note}
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <div class="note-overlay" on:click={closeNote}>
+    <div class="note-dialog" on:click|stopPropagation>
+      <h3>{name}</h3>
+      <p>{note}</p>
+      <button class="close-button" on:click={closeNote}>閉じる</button>
+    </div>
+  </div>
+{/if}
 
 <style>
   .card {
@@ -197,6 +225,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
   }
   
   .card:hover {
@@ -268,5 +297,77 @@
   .card.disabled:hover {
     transform: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .note-icon {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #666;
+    transition: color 0.2s;
+  }
+
+  .note-icon:hover {
+    color: #333;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .note-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .note-dialog {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    color: black;
+  }
+
+  .note-dialog h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+  }
+
+  .note-dialog p {
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+  }
+
+  .note-dialog .close-button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .note-dialog .close-button:hover {
+    background: #45a049;
   }
 </style>

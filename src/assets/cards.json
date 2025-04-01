@@ -5,38 +5,44 @@
       "addDamageRate": 100,
       "addBulletAmount": -2,
       "addReloadSpeedSeconds": 0.5,
-      "rarity": 1
+      "rarity": 1,
+      "note": "装弾数-2は初期に取得するとリロードが発生しやすくなるため、リロードシールドやアクアリングなどのカードと相性が良い。ダメージ下限に達した後(スプレイを取った後等)に取得するのもあり。攻撃タイミングが限られてくるので弾速をあげるなどで命中率を補う必要がある"
     },
     {
       "name": "ステディショット",
       "addDamageRate": 20,
       "addBulletSpeedRate": 40,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "他の弾速上昇系カードと違い、デメリットがほぼない点が良いカード"
     },
     {
       "name": "ファストショット",
       "addBulletSpeedRate": 120,
       "addFireRate": -50,
       "addReloadSpeedSeconds": 0.25,
-      "rarity": 1
+      "rarity": 1,
+      "note": "弾速が上昇するが、発射間隔が空くため同時発射数などを併用すると補える。スプレイとの相性は〇"
     },
     {
       "name": "マッスル",
       "addHpRate": 40,
-      "rarity": 1
+      "rarity": 1,
+      "note": "HP上昇系のカードを取るのであれば複数枚取るようにすると効果が高くなる"
     },
     {
       "name": "アンチグラビティ",
       "addAbillity": "弾丸の落下方向が逆になる",
       "addDamageRate": 50,
-      "rarity": 1
+      "rarity": 1,
+      "note": "上方向に落ちていく弾道になる。2枚とると元に戻るので単純に威力増加の効果だけを得ることができる"
     },
     {
       "name": "ハリーアップ",
       "addReloadSpeedRate": -15,
       "addShieldCoolTimeRate": -15,
-      "rarity": 1
+      "rarity": 1,
+      "note": "リロード・シールドビルドであれば取得しておいて損はない。このゲームのクールタイムは加算系をすべて足した後に減少処理が行われるため、いつとっても効果は同じである"
     },
     {
       "name": "タンク",
@@ -78,7 +84,8 @@
       "addAbillity": "弾丸にカーブする重力が付与される",
       "addDamageRate": 25,
       "addReloadSpeedRate": -30,
-      "rarity": 1
+      "rarity": 1,
+      "note": "弾道が落下しやすくなる。2枚とるとほぼ飛ばなくなるので注意。サテライトを取得すると弾道落下効果をなくすことができる。"
     },
     {
       "name": "スプリット",
@@ -96,7 +103,7 @@
     },
     {
       "name": "ポイズンバレット",
-      "addAbillity": "弾丸がヒットすると弾丸の25%が毒ダメージを与える",
+      "addAbillity": "ヒット時、弾丸の25%の毒ダメージを与える",
       "addDamageRate": 15,
       "addReloadSpeedRate": -15,
       "addBulletAmount": -1,
@@ -104,20 +111,20 @@
     },
     {
       "name": "コールドバレット",
-      "addAbillity": "弾丸がヒットすると移動速度の減少を与える",
+      "addAbillity": "ヒット時、移動速度の減少を与える",
       "addReloadSpeedSeconds": 0.25,
       "rarity": 1
     },
     {
       "name": "フロストウェーブ",
-      "addAbillity": "シールド時に敵に凍結を付与する波を放つ",
+      "addAbillity": "シールド時、凍結を付与する波を放つ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
       "name": "ヒーリングスポット",
-      "addAbillity": "シールド時に回復エリアをフィールドに作成する",
+      "addAbillity": "シールド時、回復エリアをフィールドに生成",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
@@ -131,14 +138,14 @@
     },
     {
       "name": "シールドブースト",
-      "addAbillity": "シールド時に向いている方向に衝撃波を放つ",
+      "addAbillity": "シールド時、向いている方向に衝撃波を放つ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 1
     },
     {
       "name": "ブレイクバレット",
-      "addAbillity": "弾丸がヒットするとシールド不可を3秒間付与",
+      "addAbillity": "ヒット時、シールド不可を3秒間付与",
       "addDamageRate": 20,
       "addReloadSpeedSeconds": 0.25,
       "rarity": 1
@@ -152,7 +159,7 @@
     },
     {
       "name": "パンチアウト",
-      "addAbillity": "弾丸がヒットするとノックバックを付与",
+      "addAbillity": "ヒット時、ノックバックを付与",
       "addDamageRate": 10,
       "addReloadSpeedSeconds": 0.25,
       "rarity": 1
@@ -197,14 +204,14 @@
     },
     {
       "name": "ディレイ",
-      "addAbillity": "シールド時に時間差で再度シールドをする",
+      "addAbillity": "シールド時、時間差で再度シールドをする",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.5,
       "rarity": 2
     },
     {
       "name": "プッシュエフェクト",
-      "addAbillity": "シールド時に敵を弾き飛ばす衝撃波を発生",
+      "addAbillity": "シールド時、敵を弾き飛ばす衝撃波を発生",
       "addHpRate": 25,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2
@@ -213,7 +220,7 @@
       "name": "アトラクト",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
-      "addAbillity": "シールド時に敵を吸い寄せる衝撃波を発生させる",
+      "addAbillity": "シールド時、敵を吸い寄せる衝撃波を発生させる",
       "rarity": 2
     },
     {
@@ -249,40 +256,40 @@
     {
       "name": "スカベンジャー",
       "addReloadSpeedSeconds": 0.5,
-      "addAbillity": "弾丸がヒットすると装弾数を半分回復する",
+      "addAbillity": "ヒット時、装弾数を半分回復する",
       "rarity": 2
     },
     {
       "name": "マッスルカウンター",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.25,
-      "addAbillity": "シールド時に最大HPの12%のダメージを与える",
+      "addAbillity": "シールド時、最大HPの12%のダメージを与える爆発",
       "rarity": 2
     },
     {
       "name": "スピードデーモン",
       "addHpDrainRate": 30,
-      "addAbillity": "弾丸がヒットすると4秒間移動速度+50%",
+      "addAbillity": "ヒット時、すると4秒間移動速度+50%",
       "rarity": 2
     },
     {
       "name": "ヴァンパイア",
       "addHpDrainRate": 20,
       "addFireRate": -20,
-      "addAbillity": "弾丸がヒットすると弾丸の25%分のダメージを3秒間で与える",
+      "addAbillity": "ヒット時、3秒間で弾丸の25%分のダメージ",
       "rarity": 2
     },
     {
       "name": "ダメージカッター",
       "addHpRate": 30,
-      "addAbillity": "どんなに高いダメージでも最大HPの半分までしか受けない",
+      "addAbillity": "1度に最大HPの半分までしかダメージを受けない",
       "rarity": 2
     },
     {
       "name": "ロケットジャンプ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "addAbillity": "シールド時に爆発を起こしながら上に飛びあがる",
+      "addAbillity": "シールド時、爆発を起こし上に飛びあがる",
       "rarity": 2
     },
     {
@@ -301,19 +308,19 @@
     {
       "name": "プロウラー",
       "addShieldCoolTimeRate": -20,
-      "addAbillity": "弾丸がヒットすると自身のHPが4秒間+150%",
+      "addAbillity": "ヒット時、自身のHPを4秒間+150%",
       "rarity":2
     },
     {
       "name": "フォートレス",
       "addHpRate": 20,
-      "addAbillity": "ダメージを受けて4秒間ダメージを50%カット",
+      "addAbillity": "被弾後、4秒間ダメージを50%カット",
       "rarity": 2
     },
     {
       "name": "テレポート",
       "addShieldCoolTimeRate": -30,
-      "addAbillity": "シールド時にテレポートする",
+      "addAbillity": "シールド時、テレポートする",
       "rarity": 3
     },
     {
@@ -349,7 +356,7 @@
     },
     {
       "name": "リフレッシュ",
-      "addAbillity": "弾丸が敵にヒットするとシールドCDを即時回復する",
+      "addAbillity": "ヒット時、シールドCDを即時回復する",
       "rarity": 3
     },
     {
@@ -379,26 +386,26 @@
       "name": "スーパーノヴァ",
       "addHpRate": 20,
       "addShieldCoolTimeSeconds": 0.5,
-      "addAbillity": "シールド時に時間差で大爆発を起こす",
+      "addAbillity": "シールド時、時間差で大爆発を起こす",
       "rarity": 3
     },
     {
       "name": "スラッシュ",
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
-      "addAbillity": "シールド時に持続的にダメージを与える衝撃波を出す",
+      "addAbillity": "シールド時、持続ダメージAoEを自分の周りに生成",
       "rarity": 3
     },
     {
       "name": "タクティカルリロード",
       "addShieldCoolTimeSeconds": 0.25,
-      "addAbillity": "シールド時に装弾数を回復する",
+      "addAbillity": "シールド時、装弾数を回復する",
       "rarity": 3
     },
     {
       "name": "パルスソナー",
       "addShieldCoolTimeSeconds": 0.5,
-      "addAbillity": "シールドCD完了時に3秒間マークと破壊を与える",
+      "addAbillity": "シールドCD完了時、周囲の敵に3秒間マークと破壊を付与",
       "rarity": 3
     },
     {
@@ -416,7 +423,7 @@
     },
     {
       "name": "ファイアワークス",
-      "addAbillity": "弾丸が一定の高さで花火",
+      "addAbillity": "弾丸が一定の高さで花火を出す",
       "addReloadSpeedSeconds": 0.25,
       "rarity": 1
     },

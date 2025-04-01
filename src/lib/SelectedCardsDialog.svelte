@@ -27,6 +27,11 @@
               {#if card.addAbillity}
                 <p class="ability">{card.addAbillity}</p>
               {/if}
+              {#if card.note}
+                <div class="note-section">
+                  <p class="note-text">{card.note}</p>
+                </div>
+              {/if}
             </div>
           {/each}
         {/if}
@@ -99,5 +104,17 @@
   .ability {
     color: purple;
     margin: 0;
+  }
+
+  .note-section {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid purple;
+  }
+
+  .note-text {
+    margin: 0;
+    color: #555;
   }
 </style>

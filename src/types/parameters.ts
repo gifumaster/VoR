@@ -7,12 +7,14 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   hp: { min: 10, max: 1000 },
   hpDrain: { min: 0, max: null },
   damege: { min: 10, max: 1000 },
-  reloadSpeed: { min: 0.01, max: null },
+  reloadSpeedSec: { min: 0, max: null },
+  reloadSpeedRate: { min: 0, max: null },
   bulletSpeed: { min: 1, max: 100 },
   bulletAmount: { min: 1, max: null },
   bulletBounds: { min: 0, max: null },
   bulletAmountPerShot: { min: 1, max: null },
-  shieldCoolTime: { min: 0.01, max: null },
+  shieldCoolTimeSec: { min: 0, max: null },
+  shieldCoolTimeRate: { min: 0, max: 100 },
   fireRate: { min: 10, max: 400 },
   movingSpeed: { min: 10, max: null },
   jumpHeight: { min: 10, max: null },
@@ -24,11 +26,15 @@ export interface PlayerParameters {
   hpDrain: number;
   damege: number;
   reloadSpeed: number;
+  reloadSpeedSec: number;
+  reloadSpeedRate: number;
   bulletSpeed: number;
   bulletAmount: number;
   bulletBounds: number;
   bulletAmountPerShot: number;
   shieldCoolTime: number;
+  shieldCoolTimeSec: number;
+  shieldCoolTimeRate: number;
   fireRate: number;
   movingSpeed: number;
   jumpHeight: number;
