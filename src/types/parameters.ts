@@ -15,7 +15,7 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   bulletAmountPerShot: { min: 1, max: null },
   shieldCoolTimeSec: { min: 0, max: null },
   shieldCoolTimeRate: { min: 10, max: 100 },
-  fireRate: { min: 0, max: 100 },
+  fireRate: { min: 0.01, max: 1000 },
   movingSpeed: { min: 10, max: null },
   jumpHeight: { min: 10, max: null },
   numberOfJump: { min: 1, max: null }

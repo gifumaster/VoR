@@ -89,7 +89,8 @@
       <tr>
         <td>連射速度:</td>
         <td class:buff={$parameterStore.fireRate > defaultJson.fireRate} class:debuff={$parameterStore.fireRate < defaultJson.fireRate}>
-          {Math.floor($parameterStore.fireRate * 100) / 100}
+          {Math.floor(100 * (1 / $parameterStore.fireRate))/100}/sec
+          ({Math.floor($parameterStore.fireRate * 100) / 100})
         </td>
       </tr>
       <tr>
@@ -129,7 +130,8 @@
 
   <p class="notice">
     上限値を把握してないものもあります。<br />
-  　上限周りの処理は結構適当です。<br />
+  　連射速度はリロードを考えない場合、1秒間に何発撃てるかの表記を取っています。
+    ()内の数値はゲーム上で表現されるFireRateです。
   </p>
 
 </div>
