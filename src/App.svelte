@@ -4,7 +4,13 @@
   import PlayerStatus from './lib/PlayerStatus.svelte';
   import cardJson from "./assets/cards.json";
 
-  let filteredCards = cardJson.cards;
+  // 初期状態でレアリティ→カード名でソートされた配列を作成
+  let filteredCards = [...cardJson.cards].sort((a, b) => {
+    if (a.rarity !== b.rarity) {
+      return a.rarity - b.rarity; // レアリティで降順ソート
+    }
+    return a.name.localeCompare(b.name); // レアリティが同じ場合はカード名で昇順ソート
+  });
 
   type Card = {
     name: string;
@@ -51,6 +57,16 @@
         // 数値として降順にソート
         return Number(bValue) - Number(aValue);
       });
+    } else {
+      // statFilterが指定されていない場合は、レアリティ→カード名の順でソート
+      filtered.sort((a: Card, b: Card) => {
+        // まずレアリティで降順ソート
+        if (a.rarity !== b.rarity) {
+          return a.rarity - b.rarity;
+        }
+        // レアリティが同じ場合はカード名で昇順ソート
+        return a.name.localeCompare(b.name);
+      });
     }
 
     filteredCards = filtered;
@@ -72,6 +88,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-width: 1440px;
   }
 
   .content-wrapper {
@@ -79,28 +96,16 @@
     gap: 1rem;
     width: 100%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* コンテンツを上寄せに */
   }
 
   :global(.content-wrapper > :first-child) {
     flex: 0 0 300px;
-    min-width: 250px;
-    max-width: 300px; /* ステータスパネルの最大幅を設定 */
   }
 
   :global(.content-wrapper > :last-child) {
     flex: 1;
-    min-width: 200px; /* カードの最小幅 */
-  }
-
-  @media (max-width: 768px) {
-    :global(.content-wrapper > :first-child) {
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-
-    :global(.content-wrapper > :last-child) {
-      flex: 1 1 100%;
-    }
+    max-width: calc(100% - 300px - 2rem);
+    align-self: flex-start; /* カードグリッドを上寄せに */
   }
 </style>
