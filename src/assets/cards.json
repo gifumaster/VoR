@@ -609,7 +609,7 @@
     },
     {
       "name": "エナジードリンク",
-      "addAbillity": "一定間隔で速度バフと連射バフを付与する",
+      "addAbillity": "一定間隔で速度バフと速度デバフを付与する",
       "addReloadSpeedRate": -10,
       "addHpRate": -20,
       "rarity": 3,
