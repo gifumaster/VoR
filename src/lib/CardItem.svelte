@@ -1,6 +1,7 @@
 <script lang="ts">
   import { parameterStore, selectedCardStore } from './stores/parameterStore';
   let isClicked = false;
+  let isDisabled = false;
   
   export let name = '';
   export let addHpRate: number | undefined = undefined;
@@ -26,7 +27,12 @@
                    rarity === 3 ? '#500050' :  // 紫色
                    '#ddd';  // デフォルトの色
 
+  // 選択済みカード数の監視
+  $: isDisabled = $selectedCardStore.length >= 30;
+
   async function handleCardSelect() {
+    if (isDisabled) return;
+    
     isClicked = true;
     
     // アニメーション完了を待つ
@@ -67,6 +73,7 @@
 <div 
   class="card" 
   class:clicked={isClicked}
+  class:disabled={isDisabled}
   style:border-color={borderColor} 
   on:click={handleCardSelect}
 >
@@ -249,5 +256,17 @@
   .ability {
     color: purple;
     text-align: left;
+  }
+
+  .card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card.disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 </style>

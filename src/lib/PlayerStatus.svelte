@@ -20,6 +20,15 @@
 <div class="status-panel">
   <div class="header">
     <h2>ステータス</h2>
+    <div class="button-group">
+      <button class="show-cards-button" on:click={showSelectedCards}>
+        {$selectedCardStore.length}枚選択中
+      </button>      
+      <button class="reset-button" on:click={resetAll}>
+        リセット
+      </button>
+    </div>
+  
   </div>
   <table class="stats">
     <tbody>
@@ -103,19 +112,25 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- アビリティ一覧を追加 -->
+  {#if $selectedCardStore.some(card => card.addAbillity)}
+    <div class="abilities-section">
+      <h3>アビリティ</h3>
+      <ul class="abilities-list">
+        {#each $selectedCardStore.filter(card => card.addAbillity) as card}
+          <li>
+            <span class="ability-desc">{card.addAbillity}</span>
+          </li>
+        {/each}
+      </ul>
+    </div>
+  {/if}
+
   <p class="notice">
     上限値を把握してないものもあります。<br />
   　上限周りの処理は結構適当です。<br />
   </p>
-  <div class="button-group">
-    <button class="show-cards-button" on:click={showSelectedCards}>
-      カード {$selectedCardStore.length}枚選択中
-    </button>  
-  
-    <button class="reset-button" on:click={resetAll}>
-      リセット
-    </button>
-  </div>
 
 </div>
 
@@ -209,6 +224,40 @@
 
   .debuff {
     color: red;
+  }
+
+  .abilities-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  .abilities-section h3 {
+    color: #333;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .abilities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .abilities-list li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  .ability-name {
+    font-weight: bold;
+    color: #333;
+    margin-right: 0.5rem;
+  }
+
+  .ability-desc {
+    color: purple;
   }
 
   .notice{
