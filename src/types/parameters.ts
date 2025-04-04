@@ -8,7 +8,7 @@ export const PARAMETER_LIMITS: Record<string, ParameterLimits> = {
   hpDrain: { min: 0, max: null },
   damege: { min: 10, max: 1000 },
   reloadSpeedSec: { min: 0, max: null },
-  reloadSpeedRate: { min: 10, max: null },
+  reloadSpeedRate: { min: 0, max: null },
   bulletSpeed: { min: 10, max: 450 },
   bulletAmount: { min: 1, max: 20 },
   bulletBounds: { min: 0, max: null },
