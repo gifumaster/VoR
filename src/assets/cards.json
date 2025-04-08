@@ -529,7 +529,7 @@
     {
       "name": "アースクリスタル",
       "addAbillity": "シールド時、地面からクリスタルを生成。消滅時にシールド効果発動",
-      "addReloadSpeedSeconds": 0.5,
+      "addShieldCoolTimeSeconds": 0.5,
       "addHpRate": 20,
       "rarity": 3,
       "movie": true,
