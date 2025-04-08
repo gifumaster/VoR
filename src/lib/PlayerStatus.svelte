@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { parameterStore, selectedCardStore } from './stores/parameterStore';
-  import SelectedCardsDialog from './SelectedCardsDialog.svelte';
+  import { parameterStore, selectedCardStore } from "./stores/parameterStore";
+  import SelectedCardsDialog from "./SelectedCardsDialog.svelte";
 
   // デフォルトのパラメータをインポート
-  import defaultJson from '../assets/default.json';
+  import defaultJson from "../assets/default.json";
 
   let isDialogOpen = false;
 
@@ -23,91 +23,138 @@
     <div class="button-group">
       <button class="show-cards-button" on:click={showSelectedCards}>
         {$selectedCardStore.length}枚選択
-      </button>      
-      <button class="reset-button" on:click={resetAll}>
-        リセット
       </button>
+      <button class="reset-button" on:click={resetAll}> リセット </button>
     </div>
-  
   </div>
   <table class="stats">
     <tbody>
       <tr>
         <td>HP:</td>
-        <td class:buff={$parameterStore.hp > defaultJson.hp} class:debuff={$parameterStore.hp < defaultJson.hp}>
+        <td
+          class:buff={$parameterStore.hp > defaultJson.hp}
+          class:debuff={$parameterStore.hp < defaultJson.hp}
+        >
           {Math.floor($parameterStore.hp)}
         </td>
       </tr>
       <tr>
         <td>ダメージ:</td>
-        <td class:buff={$parameterStore.damege > defaultJson.damege} class:debuff={$parameterStore.damege < defaultJson.damege}>
+        <td
+          class:buff={$parameterStore.damege > defaultJson.damege}
+          class:debuff={$parameterStore.damege < defaultJson.damege}
+        >
           {Math.floor($parameterStore.damege)}
         </td>
       </tr>
       <tr>
         <td>HP吸収:</td>
-        <td class:buff={$parameterStore.hpDrain > defaultJson.hpDrain} class:debuff={$parameterStore.hpDrain < defaultJson.hpDrain}>
+        <td
+          class:buff={$parameterStore.hpDrain > defaultJson.hpDrain}
+          class:debuff={$parameterStore.hpDrain < defaultJson.hpDrain}
+        >
           {Math.floor($parameterStore.hpDrain)} %
         </td>
       </tr>
       <tr>
         <td>装弾数:</td>
-        <td class:buff={$parameterStore.bulletAmount > defaultJson.bulletAmount} class:debuff={$parameterStore.bulletAmount < defaultJson.bulletAmount}>
+        <td
+          class:buff={$parameterStore.bulletAmount > defaultJson.bulletAmount}
+          class:debuff={$parameterStore.bulletAmount < defaultJson.bulletAmount}
+        >
           {Math.floor($parameterStore.bulletAmount)}
         </td>
       </tr>
       <tr>
         <td>同時発射数:</td>
-        <td class:buff={$parameterStore.bulletAmountPerShot > defaultJson.bulletAmountPerShot} class:debuff={$parameterStore.bulletAmountPerShot < defaultJson.bulletAmountPerShot}>
+        <td
+          class:buff={$parameterStore.bulletAmountPerShot >
+            defaultJson.bulletAmountPerShot}
+          class:debuff={$parameterStore.bulletAmountPerShot <
+            defaultJson.bulletAmountPerShot}
+        >
           {Math.floor($parameterStore.bulletAmountPerShot)}
         </td>
       </tr>
       <tr>
         <td>跳弾回数:</td>
-        <td class:buff={$parameterStore.bulletBounds > defaultJson.bulletBounds} class:debuff={$parameterStore.bulletBounds < defaultJson.bulletBounds}>
+        <td
+          class:buff={$parameterStore.bulletBounds > defaultJson.bulletBounds}
+          class:debuff={$parameterStore.bulletBounds < defaultJson.bulletBounds}
+        >
           {Math.floor($parameterStore.bulletBounds)}
         </td>
       </tr>
       <tr>
         <td>リロード速度:</td>
-        <td class:buff={$parameterStore.reloadSpeed < defaultJson.reloadSpeed} class:debuff={$parameterStore.reloadSpeed > defaultJson.reloadSpeed}>
-          {Math.floor($parameterStore.reloadSpeed*100)/100}秒
+        <td
+          class:buff={$parameterStore.reloadSpeed < defaultJson.reloadSpeed}
+          class:debuff={$parameterStore.reloadSpeed > defaultJson.reloadSpeed}
+        >
+          {Math.floor($parameterStore.reloadSpeed * 100) / 100}秒
         </td>
       </tr>
       <tr>
         <td>シールドCD:</td>
-        <td class:buff={$parameterStore.shieldCoolTime < defaultJson.shieldCoolTime} class:debuff={$parameterStore.shieldCoolTime > defaultJson.shieldCoolTime}>
-          {Math.floor($parameterStore.shieldCoolTime*100)/100}秒
+        <td
+          class:buff={$parameterStore.shieldCoolTime <
+            defaultJson.shieldCoolTime}
+          class:debuff={$parameterStore.shieldCoolTime >
+            defaultJson.shieldCoolTime}
+        >
+          {Math.floor($parameterStore.shieldCoolTime * 100) / 100}秒
         </td>
       </tr>
       <tr>
         <td>弾速:</td>
-        <td class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed} class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}>
-          {18 * Math.floor($parameterStore.bulletSpeed)/100} ({Math.floor($parameterStore.bulletSpeed)}%)
+        <td
+          class:buff={$parameterStore.bulletSpeed > defaultJson.bulletSpeed}
+          class:debuff={$parameterStore.bulletSpeed < defaultJson.bulletSpeed}
+        >
+          {(18 * Math.floor($parameterStore.bulletSpeed)) / 100} ({Math.floor(
+            $parameterStore.bulletSpeed,
+          )}%)
         </td>
       </tr>
       <tr>
         <td>連射速度:</td>
-        <td class:buff={$parameterStore.fireRate < defaultJson.fireRate} class:debuff={$parameterStore.fireRate > defaultJson.fireRate}>
-          {Math.floor(100 * (1 / $parameterStore.fireRate))/100}/sec
-          ({Math.floor($parameterStore.fireRate * 100) / 100})
+        <td
+          class:buff={$parameterStore.fireRate < defaultJson.fireRate}
+          class:debuff={$parameterStore.fireRate > defaultJson.fireRate}
+        >
+          {Math.floor(100 * (1 / $parameterStore.fireRate)) / 100}/sec ({Math.floor(
+            $parameterStore.fireRate * 100,
+          ) / 100})
         </td>
       </tr>
       <tr>
         <td>移動速度:</td>
-        <td class:buff={$parameterStore.movingSpeed > defaultJson.movingSpeed} class:debuff={$parameterStore.movingSpeed < defaultJson.movingSpeed}>
-          {5 * Math.floor($parameterStore.movingSpeed)/100 } ({Math.floor($parameterStore.movingSpeed)}%)
+        <td
+          class:buff={$parameterStore.movingSpeed > defaultJson.movingSpeed}
+          class:debuff={$parameterStore.movingSpeed < defaultJson.movingSpeed}
+        >
+          {(5 * Math.floor($parameterStore.movingSpeed)) / 100} ({Math.floor(
+            $parameterStore.movingSpeed,
+          )}%)
         </td>
       </tr>
       <tr>
         <td>ジャンプ力:</td>
-        <td class:buff={$parameterStore.jumpHeight > defaultJson.jumpHeight} class:debuff={$parameterStore.jumpHeight < defaultJson.jumpHeight}>
-          {8 * Math.floor($parameterStore.jumpHeight)/100} ({Math.floor($parameterStore.jumpHeight)}%)
+        <td
+          class:buff={$parameterStore.jumpHeight > defaultJson.jumpHeight}
+          class:debuff={$parameterStore.jumpHeight < defaultJson.jumpHeight}
+        >
+          {(8 * Math.floor($parameterStore.jumpHeight)) / 100} ({Math.floor(
+            $parameterStore.jumpHeight,
+          )}%)
         </td>
       </tr>
       <tr>
         <td>ジャンプ回数:</td>
-        <td class:buff={$parameterStore.numberOfJump > defaultJson.numberOfJump} class:debuff={$parameterStore.numberOfJump < defaultJson.numberOfJump}>
+        <td
+          class:buff={$parameterStore.numberOfJump > defaultJson.numberOfJump}
+          class:debuff={$parameterStore.numberOfJump < defaultJson.numberOfJump}
+        >
           {Math.floor($parameterStore.numberOfJump)}回
         </td>
       </tr>
@@ -115,11 +162,11 @@
   </table>
 
   <!-- アビリティ一覧を追加 -->
-  {#if $selectedCardStore.some(card => card.addAbillity)}
+  {#if $selectedCardStore.some((card) => card.addAbillity)}
     <div class="abilities-section">
       <h3>アビリティ</h3>
       <ul class="abilities-list">
-        {#each $selectedCardStore.filter(card => card.addAbillity) as card}
+        {#each $selectedCardStore.filter((card) => card.addAbillity) as card}
           <li>
             <span class="ability-desc">{card.addAbillity}</span>
           </li>
@@ -130,10 +177,9 @@
 
   <p class="notice">
     上限値を把握してないものもあります。<br />
-  　連射速度はリロードを考えない場合、1秒間に何発撃てるかの表記を取っています。
+    　連射速度はリロードを考えない場合、1秒間に何発撃てるかの表記を取っています。
     ()内の数値はゲーム上で表現されるFireRateです。
   </p>
-
 </div>
 
 <SelectedCardsDialog bind:isOpen={isDialogOpen} />
@@ -143,14 +189,25 @@
     background-color: #fff;
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     color: black;
     position: sticky;
-    top: 7rem;  /* ヘッダーの高さ + 余白 */
-    max-height: calc(100vh - 8rem);  /* ビューポートの高さから余白を引く */
+    top: 7rem; /* ヘッダーの高さ + 余白 */
+    max-height: calc(100vh - 8rem); /* ビューポートの高さから余白を引く */
     overflow-y: auto;
     align-self: flex-start;
+    z-index: 10; /* z-indexを追加 */
+  }
+
+  @media screen and (max-width: 768px) {
+    .status-panel {
+      position: relative;
+      top: 0;
+      max-height: none;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   .header {
@@ -184,7 +241,7 @@
 
   .show-cards-button {
     padding: 0.5rem 1rem;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 4px;
@@ -262,8 +319,8 @@
     color: purple;
   }
 
-  .notice{
-    color:gray;
+  .notice {
+    color: gray;
     font-size: 0.8rem;
   }
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import CardSearch from './lib/CardSearch.svelte';
-  import CardGrid from './lib/CardGrid.svelte';
-  import PlayerStatus from './lib/PlayerStatus.svelte';
+  import CardSearch from "./lib/CardSearch.svelte";
+  import CardGrid from "./lib/CardGrid.svelte";
+  import PlayerStatus from "./lib/PlayerStatus.svelte";
   import cardJson from "./assets/cards.json";
 
   // 初期状態でレアリティ→カード名でソートされた配列を作成
@@ -32,15 +32,22 @@
     addAbillity?: string;
   };
 
-  function handleSearch(event: CustomEvent<{ query: string, statFilter: string, rarityFilter: string }>) {
+  function handleSearch(
+    event: CustomEvent<{
+      query: string;
+      statFilter: string;
+      rarityFilter: string;
+    }>,
+  ) {
     const { query, statFilter, rarityFilter } = event.detail;
     const searchText = query.toLowerCase();
 
     let filtered = cardJson.cards.filter((card: Card) => {
       const nameMatch = card.name.toLowerCase().includes(searchText);
-      const statMatch = !statFilter || card[statFilter as keyof Card] !== undefined;
-      const rarityMatch = !rarityFilter || (card.rarity === Number(rarityFilter));
-      
+      const statMatch =
+        !statFilter || card[statFilter as keyof Card] !== undefined;
+      const rarityMatch = !rarityFilter || card.rarity === Number(rarityFilter);
+
       return nameMatch && statMatch && rarityMatch;
     });
 
@@ -49,11 +56,11 @@
       filtered.sort((a: Card, b: Card) => {
         const aValue = a[statFilter as keyof Card];
         const bValue = b[statFilter as keyof Card];
-        
+
         // undefinedの値は後ろに
         if (aValue === undefined) return 1;
         if (bValue === undefined) return -1;
-        
+
         // 数値として降順にソート
         return Number(bValue) - Number(aValue);
       });
@@ -88,7 +95,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-width: 1440px;
+    width: 100%;
+    max-width: 1440px;
   }
 
   .content-wrapper {
@@ -96,16 +104,40 @@
     gap: 1rem;
     width: 100%;
     justify-content: center;
-    align-items: flex-start; /* コンテンツを上寄せに */
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   :global(.content-wrapper > :first-child) {
     flex: 0 0 300px;
+    width: 100%;
+    max-width: 300px;
   }
 
   :global(.content-wrapper > :last-child) {
     flex: 1;
-    max-width: calc(100% - 300px - 2rem);
-    align-self: flex-start; /* カードグリッドを上寄せに */
+    min-width: 300px;
+    max-width: 100%;
+    align-self: flex-start;
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      padding: 4rem 0.5rem 1rem 0.5rem;
+    }
+
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    :global(.content-wrapper > :first-child) {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    :global(.content-wrapper > :last-child) {
+      max-width: 100%;
+    }
   }
 </style>

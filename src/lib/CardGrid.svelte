@@ -1,6 +1,6 @@
 <script lang="ts">
-  import CardItem from './CardItem.svelte';
-  
+  import CardItem from "./CardItem.svelte";
+
   export let cards: Array<{
     name: string;
     addHpRate?: number;
@@ -18,7 +18,7 @@
 <style>
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 1rem;
     padding: 1rem;
     padding-top: 0;
@@ -30,4 +30,9 @@
     align-items: start;
   }
 
+  @media screen and (min-width: 1920px) {
+    .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 </style>
