@@ -1,5 +1,6 @@
 <script lang="ts">
   import { parameterStore, selectedCardStore } from "./stores/parameterStore";
+  import MoviePlayer from "./MoviePlayer.svelte";
   let isClicked = false;
   let isDisabled = false;
   let showNote = false;
@@ -23,7 +24,7 @@
   export let addAbillity: string | undefined = undefined;
   export let rarity: number | undefined = undefined;
   export let note: string | undefined = undefined;
-  export let movie: string | undefined = undefined;
+  export let movie: boolean | undefined = undefined;
 
   $: borderColor =
     rarity === 1
@@ -237,9 +238,7 @@
     <div class="note-dialog" on:click|stopPropagation>
       <h3>{name}</h3>
       {#if movie}
-        <video class="card-movie" autoplay loop muted playsinline>
-          <source src="/VoR/movies/{name}.mp4" type="video/mp4" />
-        </video>
+        <MoviePlayer movieName={name} />
       {/if}
       <p>{note}</p>
       <button class="close-button" on:click={closeNote}>閉じる</button>
