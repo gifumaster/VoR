@@ -238,7 +238,7 @@
       <h3>{name}</h3>
       {#if movie}
         <video class="card-movie" autoplay loop muted playsinline>
-          <source src="/VoR/movies/{movie}" type="video/mp4" />
+          <source src="/VoR/movies/{name}.mp4" type="video/mp4" />
         </video>
       {/if}
       <p>{note}</p>
