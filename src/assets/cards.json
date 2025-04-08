@@ -551,6 +551,7 @@
       "addHpRate": 10,
       "addShieldCoolTimeSeconds": 0.25,
       "rarity": 2,
+      "movie": true,
       "note": "壁を貫通するためマップによっては敵の死角から当てることができる。複数枚取ると炎の数が増える。"
     },
     {
