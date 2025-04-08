@@ -227,6 +227,9 @@
   {#if note}
     <button class="note-icon" on:click={toggleNote}>
       <span class="icon">ⓘ</span>
+      {#if movie}
+        <span class="movie-icon">🎥</span>
+      {/if}
     </button>
   {/if}
 </div>
@@ -348,6 +351,9 @@
     font-size: 1.2rem;
     color: #666;
     transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 
   .note-icon:hover {
@@ -360,6 +366,24 @@
     height: 24px;
     line-height: 24px;
     text-align: center;
+  }
+
+  .movie-icon {
+    font-size: 1.1rem;
+    color: #ff6b6b;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .note-overlay {
