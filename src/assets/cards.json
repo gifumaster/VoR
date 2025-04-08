@@ -82,6 +82,7 @@
       "addHpRate": 10,
       "addAbillity": "弾丸のサイズが大きくなる",
       "rarity": 1,
+      "movie": "ビッグバレット.mp4",
       "note": "弾丸の周りに円状のエフェクトが発生して当たり判定が増えている模様\n 複数枚取るとより大きくなるが威力はあがらないため他に優先したいカードは多い。"
     },
     {
@@ -346,7 +347,7 @@
       "name": "プロウラー",
       "addShieldCoolTimeRate": -20,
       "addAbillity": "ヒット時、自身のHPを4秒間+150%",
-      "rarity":2,
+      "rarity": 2,
       "note": "CD減少効果がうれしい。\n上限HP1000の壁を超えることができるのでマッスルカウンタービルドならあってもよいカード"
     },
     {
@@ -373,7 +374,7 @@
     },
     {
       "name": "トリックスター",
-      "addBulletBounds":2,
+      "addBulletBounds": 2,
       "addDamageRate": -20,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "跳弾時に弾丸ダメージが+50%される",
@@ -383,7 +384,7 @@
     {
       "name": "ホークアイ",
       "addBulletSpeedRate": 70,
-      "addDamageRate" :100,
+      "addDamageRate": 100,
       "addFireRate": -150,
       "addReloadSpeedSeconds": 0.5,
       "addAbillity": "弾丸の拡散が0になる",
@@ -470,7 +471,7 @@
     {
       "name": "バウンスレーザー",
       "addAbillity": "跳弾時に前回の着弾地点に向けてレーザー",
-      "addBulletBounds":2,
+      "addBulletBounds": 2,
       "addReloadSpeedSeconds": 0.25,
       "rarity": 1,
       "note": "複数枚取るとレーザーは太くなる"
@@ -597,7 +598,7 @@
       "addAbillity": "自動的に一定間隔で攻撃を行う",
       "addReloadSpeedSeconds": 0.5,
       "rarity": 3,
-      "note":"上部に球体がつねにつきまとうようになるため、自身の位置が敵からバレやすい"
+      "note": "上部に球体がつねにつきまとうようになるため、自身の位置が敵からバレやすい"
     },
     {
       "name": "ドローン",
@@ -613,14 +614,14 @@
       "addReloadSpeedRate": -10,
       "addHpRate": -20,
       "rarity": 3,
-      "note" : "エナドリは元気の前借。バフ(移動速度+110%,ジャンプ力+60%)の後にデバフ(移動力-60%、ジャンプ力-30%)が短時間付与される。複数枚取得するとバフ、デバフともに効果時間が延長される。\nデバフの直前に大きくジャンプをして慣性移動することでデバフをある程度無視できる"
+      "note": "エナドリは元気の前借。バフ(移動速度+110%,ジャンプ力+60%)の後にデバフ(移動力-60%、ジャンプ力-30%)が短時間付与される。複数枚取得するとバフ、デバフともに効果時間が延長される。\nデバフの直前に大きくジャンプをして慣性移動することでデバフをある程度無視できる"
     },
     {
       "name": "ぬいぐるみ",
       "addAbillity": "他プレイヤーにプレゼントを渡す",
       "addShieldCoolTimeSeconds": 0.5,
       "rarity": 3,
-      "note" : "敵プレイヤーの近くにプレゼント型のオブジェクトを設置する。触れると爆発する？"
+      "note": "敵プレイヤーの近くにプレゼント型のオブジェクトを設置する。触れると爆発する？"
     }
   ]
 }
